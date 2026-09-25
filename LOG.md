@@ -30,3 +30,22 @@ Já aviso que, antes de falar cada questao do diagnostico, todas eu tive que rev
 
 Conclusao do diagnostico: Acredito que nao fui bem. Por mais que tenha ideo melhor que meu primeiro diagnostico de python, sinto que ate os exercicios que acertei, nao me senti 100% confiante e com a resposta na ponta da lingua sabe? Por isso mesmo que acho que vou precisar de uma aula para relembrar tudo isso e entender a estrutura e logica por tras do sql.
 
+
+### 2026-09-24 — Joins e agregação (4h)
+
+**O que fiz**
+Comecei o dia realizando a leitura do material de sql e entendendo como cada uma das coisas funcionavam. A partir dai, as coisas comecaram a ficar mais claras na minha cabeca. Nao vou falar que sou um experto em sql, pois ainda tem chao. Mas ja melhorou. Entender a ordem de execucao ajudou bastante.
+Depois parti para os exercicios. TODOS bateram, exceto o B2, onde dormi ali no calculo de receita. Na hora, tinha esquecido que cada pedido podia ter mais de um produto. Logo, quando agrupei por pedido, esqueci que cada pedido poderia ter mais de uma receita proveniente de produtos diferentes. Logo, quando rodei, nao deu erro, pareceu tudo bem, mas na verdade o sql tinha pego apenas a receita inicial (so deu certo para os pedidos que tinham um produto). Na hora que estava corrigindo percebi o erro. Nos exercicios seguintes nao cometi mais o mesmo erro. 
+Nos outros exercicios, passei oparte do tempo testando coisas, mudando a forma de escrever o JOIN, "printando" algumas tabelas mais rusticas (por exemplo logo apo o JOIN) para entender a estrutura.
+
+**Onde travei**
+Falar que nao travei muito. O unico ponto foi naquela parte em que eu tinha que colocar o WHERE errado, e e u nao sabia fazer.
+
+**O que ainda não entendo**
+Nao eh que nao entendo, mas sinto que preciso "printar" mais coisas. Pois quando comeco a escrever um codigo grande, vou me perdendo no raciocinio, e as vezes na hora de agregar fica confuso. Entao sinto que preciso ir com calma, sempre vendo os resultados que me retornam.
+
+**Sensação vs. resultado**
+Acredito que fui bem.
+
+**Pendências**
+Terminar o diagnostico.
