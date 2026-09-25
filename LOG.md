@@ -49,3 +49,28 @@ Acredito que fui bem.
 
 **Pendências**
 Terminar o diagnostico.
+
+
+### 2026-09-25 — Teste e correcoes (2h)
+
+**O que fiz**
+Comecei pelo diagnostico. Na parte de HTTPS, foi inviavel para mim. Ja usei isso na faculdade, mas esqueci completamente como funciona. Entao, ao inves de usar os 30 minutos, usei 10 e assumi a derrota. So escrevi o que aparecia quando eu passava com o cursor em cima do requests, onde ele dava alguns exemplos de como usar.
+Em seguida parti para a parte de git. A primeira parte consegui fazer bem tranquilo. Criei a pasta fora de Fase1, iniciei o ambiente git com git init, e mudei o nome da branch de master para main. Usei o touch para criar o arquivo novo e em usei o echo, nano e o cat para escrever alterar e ler os arquivos no terminal. Em seguida, criei duas branches, branch1 e branch2, pois era como tinha interpretado o enunciado (depois que me liguei que talvez o enunciado queria a main e uma outra branch), e alterei o arquivo .md que havia criado. O problema foi no git merge. Inicialmente usei o comando git merge na branch1, e deu erro. Mudei pra main e rodei git merge branch1, o que resultou em um overwrite do arquivo na main, que a apartir desse ponto, ficou com o conteudo que tinha escrito na branch1. E ai que foi o problema, pois nao gerou conflito algum, e por isso nao precisei resolver o conflito. Imagino que tenha feito coisa errada ai.
+Por fim, fiz todas as correcoes, e consegui entender a questao do WHERE. Todas as correcoes eu imagino que consegui faze-las da maneira certa e entender seus motivos.
+Nao tive tempo no dia para fazer a parte de LEFT JOIN.
+
+**Onde travei**
+Travei na parte de HTTPS inteira, e travei quando o git merge branch1 nao gerou conflito algum.
+
+**O que ainda não entendo**
+Nao entendo como usar o requests em python, e ate mesmo um pouquinho da teoria por tras desse conteudo.
+Alem disso, a minha alteracao da resposta da pergunta 2 da leitura eu nao tenho 100% de certeza que esta correta, mas imagino eu que esteja.
+
+**Sensação vs. resultado**
+Nao fui muito bem, considerando que mal fiz a parte do HTTP e o git merge nao foi como esperado.
+Pelo menos, acredito que tenha mandado melhor na parte de sql que fiz.
+
+**Pendências**
+Parte de LEFT JOIN.
+Parte de HTTP do diagnostico
+Completar parte do Git do diagnostico.
