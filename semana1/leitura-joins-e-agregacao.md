@@ -92,7 +92,7 @@ Agora, porque elas são executadas numa ordem diferente do que se escreve eu nã
 Talvez, o jeito que se escreve acaba deixando um pouco mais visual e intuitivo para o desenvolvedor.
 
 ### O que acontece com as linhas quando você combina duas tabelas sem condição? E com JOIN ... ON?
-Imagino que sem condições, as tabelas apenas são "somadas". Logo, teriam todas as linhas das duas tabelas em uma tabela só (não é isso que se quer ver quando se junta duas tabelas). Quando se usa o ON, aí sim está juntando coisas que ambas as tabelas têm em comum, facilitando a visualização e manipulação dos dados que se quer usar.
+Imagino que sem condições, as tabelas apenas são "multiplicadas", ou seja, para cada linha de uma tabela, voce tem uma linha de outra. Nao existe uma uniao de linhas baseado em algum valor de alguma coluna especifica. Quando se usa o ON, aí sim está juntando coisas que ambas as tabelas têm em comum, facilitando a visualização e manipulação dos dados que se quer usar.
 
 ### O que o GROUP BY faz com as linhas, e por que isso obriga o SELECT a seguir a regra das colunas agrupadas ou agregadas?
 O GROUP BY vai agrupar linhas que possuem o mesmo valor em uma coluna especifica, logo, ele vai fazer com que a query tenha uma linha para cada tipo de valor. Assim, caso o SELECT não use um agrupador, vai gerar conflito, pois o GROUP BY estabelece a regra de uma linha por valor, porém o SELECT vai pegar mais de um valor por linha para os colunas restantes, o que gera erro.

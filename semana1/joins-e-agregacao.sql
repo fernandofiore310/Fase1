@@ -12,11 +12,13 @@ SELECT COUNT(*) FROM pedidos, itens;
 -- Esperado (na mão, antes de rodar): era esperada a mesma saida da minha resposta ao exercicio 4 do diagnostico
 -- Conferência: bateu.
 -- Consulta: nenhuma
--- (explicação, quando o exercício pedir)
+-- Combinar com WHERE e virgula voce esta apenas filtrando as linhas das tabelas que voce selecionou, sem junta-las
+-- Quando se usa o JOIN, voce esta literalmente unindo as tabelas atraves das linhas que possuem a mesma condicao garantida pelo ON.
 
 SELECT pedidos.id, clientes.nome, pedidos.data
 FROM pedidos
 INNER JOIN clientes ON pedidos.cliente_id = clientes.id
+ORDER BY pedidos.id
 ;
 
 -- A3
@@ -65,6 +67,7 @@ GROUP BY pedido_id
 -- Conferência: Nao bateu.
 -- Consulta: Nenhuma
 -- (explicação, quando o exercício pedir)
+-- entregue, no tempo, porem esta errada
 
 SELECT i.pedido_id, c.nome, p.data, (i.quantidade*i.preco_unitario) valor_total
 FROM itens i
@@ -73,6 +76,14 @@ INNER JOIN clientes c ON p.cliente_id = c.id
 GROUP BY i.pedido_id
 ORDER BY i.pedido_id
 ;
+
+--versao correta (feito em 5min10s)
+SELECT p.id, c.nome, p.data, SUM(i.quantidade*i.preco_unitario) valor_total
+FROM itens i
+JOIN pedidos p ON i.pedido_id = p.id
+JOIN clientes c ON p.cliente_id = c.id
+GROUP BY p.id
+ORDER BY p.id
 
 -- B3
 -- Tempo: 5min9s
@@ -85,7 +96,7 @@ SELECT c.nome, SUM(i.quantidade*i.preco_unitario) total_gasto
 FROM itens i
 INNER JOIN pedidos p ON i.pedido_id = p.id
 INNER JOIN clientes c ON p.cliente_id = c.id
-GROUP BY c.nome
+GROUP BY c.id --Revisão 25/09: agrupava por nome; agora agrupa por id
 ORDER BY total_gasto DESC
 ;
 
@@ -99,7 +110,7 @@ ORDER BY total_gasto DESC
 SELECT pr.nome, SUM(i.quantidade) unidades_vendidas
 FROM itens i
 INNER JOIN produtos pr ON i.produto_id = pr.id
-GROUP BY pr.nome
+GROUP BY pr.id --Revisão 25/09: agrupava por nome; agora agrupa por id
 ORDER BY unidades_vendidas DESC
 ;
 
@@ -113,7 +124,7 @@ ORDER BY unidades_vendidas DESC
 SELECT c.nome, COUNT(p.cliente_id) numero_pedidos 
 FROM pedidos p
 INNER JOIN clientes c ON p.cliente_id = c.id
-GROUP BY c.nome
+GROUP BY c.id --Revisão 25/09: agrupava por nome; agora agrupa por id
 HAVING numero_pedidos > 2
 ;
 
@@ -122,11 +133,13 @@ HAVING numero_pedidos > 2
 -- Esperado (na mão, antes de rodar): -
 -- Conferência: Bateu.
 -- Consulta: Nenhuma
+-- O WHERE eh a segunda coisa a ser rodada. Caso tente usar a variavel valor_total com o WHERE, o codigo vai quebrar, visto que a variavel valor total (SUM) ainda nao foi executada.
 -- Nao faz sentido filtrar com o WHERE nesse caso, visto que quando voce pede pedidos, ja sei que vou ter que agrupar, e se agrupar, vou ter que calcular o valor total com SUM, e se uso o SUM e agrupo, quer dizer que vou ter que realizar o filtro pos agrupamento (HAVING).
--- Alem disso, nem sabia de uma forma de testar com o WHERE. Nem sei como ele poderia ser usado, de maneira errada, e nao dar erro.
+-- O HAVING retorna 5 pedidos. O WHERE (usado da maneira que nao crasha) retorna 2. O WHERE faz alguns pedidos sumirem pois ele filtra antes do agrupamento. Logo, pedidos com mais de um produto, acabam tendo seu total ignorado, visto que o WHERE trabalha com cada pedido de um produto individualmente. Logo, se a receita daquele produto especifico nao for maior que 300, o WHERE descarta.
 
 SELECT pedido_id, SUM(quantidade*preco_unitario) valor_total
 FROM itens
+-- WHERE quantidade*preco_unitario > 300
 GROUP BY pedido_id
 HAVING valor_total > 300
 ;
@@ -141,7 +154,7 @@ HAVING valor_total > 300
 SELECT pr.nome, pr.categoria, SUM(i.quantidade*i.preco_unitario) receita
 FROM produtos pr
 JOIN itens i ON pr.id = i.produto_id
-GROUP BY pr.nome
+GROUP BY pr.id --Revisão 25/09: agrupava por nome; agora agrupa por id
 HAVING receita > 0
 ORDER BY pr.categoria
 ;
@@ -157,4 +170,5 @@ SELECT SUBSTR(p.data, 1, 7) mes, SUM(i.quantidade*i.preco_unitario) receita
 FROM itens i
 JOIN pedidos p ON i.pedido_id = p.id
 GROUP BY mes
+ORDER BY mes
 ;
