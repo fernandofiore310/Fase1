@@ -1,3 +1,6 @@
+## Coisas para revisar na semana seguinte
+Acredito que acertei todos os exercicios sem consulta (tirando que esqueci o DISTINCT). Mas tudo parece bem claro para mim.
+
 ## Qual a ordem de execução de um query, e o que ela explica sobre apelidos?
 A ordem é a seguinte:
 1. FROM e JOIN
