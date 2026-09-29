@@ -74,3 +74,24 @@ Pelo menos, acredito que tenha mandado melhor na parte de sql que fiz.
 Parte de LEFT JOIN.
 Parte de HTTP do diagnostico
 Completar parte do Git do diagnostico.
+
+
+### 2026-09-28 — Revisão (1h)
+
+**O que fiz**
+Comecei respondendo as perguntas. Escrevi as respostas na pasta revisao/semana1. Todas as respostar fiz de cabeça, e as fiz nos 15 minutos que tinha disponível. A única que acredito que esqueci de algo pequeno, foi a primeira, que esqueci do DISTINCT. De resto acho que fui bem.
+Em seguida fiz os três exercícios de sql. Fiz todos em menos de 5 minutos, e isso que no primeiro exercício, ainda usei o tempo para arrumar o sql e rodar os comandos de exibicao no terminal. Acredito que não tive problema algum nesses exercícios. Acredito que acertei os três. 
+
+**Onde travei**
+Não travei em nenhum a parte. A única coisa que fiz, foi olhar no histórico do terminal para ver o que ia dentro da função SUBSTR() para usar no exercício D2.
+
+**O que ainda não entendo**
+Do que foi visto hoje, acredito ter tudo entendido.
+
+**Sensação vs. resultado**
+Acredito que fui bem, considerando o baixo tempo e a parente falta de dúvidas.
+
+**Pendências**
+Parte de LEFT JOIN.
+Parte de HTTP do diagnostico
+Completar parte do Git do diagnostico.
