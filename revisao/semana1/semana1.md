@@ -1,5 +1,5 @@
 ## Coisas para revisar na semana seguinte
-Acredito que acertei todos os exercicios sem consulta (tirando que esqueci o DISTINCT). Mas tudo parece bem claro para mim.
+Perguntas 1, 3 e 4 e exercício D2
 
 ## Qual a ordem de execução de um query, e o que ela explica sobre apelidos?
 A ordem é a seguinte:

@@ -12,8 +12,8 @@ SELECT COUNT(*) FROM pedidos, itens;
 -- Esperado (na mão, antes de rodar): era esperada a mesma saida da minha resposta ao exercicio 4 do diagnostico
 -- Conferência: bateu.
 -- Consulta: nenhuma
--- Combinar com WHERE e virgula voce esta apenas filtrando as linhas das tabelas que voce selecionou, sem junta-las
--- Quando se usa o JOIN, voce esta literalmente unindo as tabelas atraves das linhas que possuem a mesma condicao garantida pelo ON.
+-- Combinar com WHERE e virgula voce esta juntando todas as linhas entre si, e então, filtrando as linhas dessa tabela resultante.
+-- Quando se usa o JOIN, voce esta literalmente unindo as tabelas atraves das linhas que possuem a mesma condicao garantida pelo ON, sem precisar ter que manipular todas as linhas (linhas tabela1 x linhas tabela2)
 
 SELECT pedidos.id, clientes.nome, pedidos.data
 FROM pedidos
@@ -69,13 +69,13 @@ GROUP BY pedido_id
 -- (explicação, quando o exercício pedir)
 -- entregue, no tempo, porem esta errada
 
-SELECT i.pedido_id, c.nome, p.data, (i.quantidade*i.preco_unitario) valor_total
-FROM itens i
-INNER JOIN pedidos p ON i.pedido_id = p.id
-INNER JOIN clientes c ON p.cliente_id = c.id
-GROUP BY i.pedido_id
-ORDER BY i.pedido_id
-;
+-- SELECT i.pedido_id, c.nome, p.data, (i.quantidade*i.preco_unitario) valor_total
+-- FROM itens i
+-- INNER JOIN pedidos p ON i.pedido_id = p.id
+-- INNER JOIN clientes c ON p.cliente_id = c.id
+-- GROUP BY i.pedido_id
+-- ORDER BY i.pedido_id
+-- ;
 
 --versao correta (feito em 5min10s)
 SELECT p.id, c.nome, p.data, SUM(i.quantidade*i.preco_unitario) valor_total
@@ -84,6 +84,7 @@ JOIN pedidos p ON i.pedido_id = p.id
 JOIN clientes c ON p.cliente_id = c.id
 GROUP BY p.id
 ORDER BY p.id
+;
 
 -- B3
 -- Tempo: 5min9s
