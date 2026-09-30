@@ -95,3 +95,6 @@ Acredito que fui bem, considerando o baixo tempo e a parente falta de dúvidas.
 Parte de LEFT JOIN.
 Parte de HTTP do diagnostico
 Completar parte do Git do diagnostico.
+
+### 2026-09-29 — Trilha de Algoritmos (2h)
+Trilha de algoritmos não iniciada.
