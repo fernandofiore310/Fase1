@@ -98,3 +98,45 @@ Completar parte do Git do diagnostico.
 
 ### 2026-09-29 — Trilha de Algoritmos (2h)
 Trilha de algoritmos não iniciada.
+
+### 2026-09-30 — Quarta (3h)
+
+**O que fiz**
+Resolvi as pendências de maneira rápida. Tirei algumas duvidas com o Claude de uns pontos que não havia entendido, mas de modo geral foi rápido.
+A única coisa foi a parte do git que levei mais tempo, perguntei para o Claude se eu deveria arrumar o arquivo usando nano, e ele me deu o comando para gerar o grafo.
+Em seguida parti para os exercícios de Left Join.
+Começando pelo E1, na minha primeira tentativa, nao apareceram nem Gabi nem Hugo, isso porque eu usei FROM pedidos LEFT JOIN clientes, ou seja, estava juntando todos os pedidos apenas com os clientes que tinham feito pedidos. Percebi isso e fiz o contrario, ou seja, FROM em clientes e LEFT JOIN com pedidos, dessa forma apareceram todos os clientes, e juntou com apenas os pedidos que tinham clientes.
+O E2 fiz muito rápido, tendo feito o anterior, foi basicamente copiar as linhas e apenas colocar uma condição no HAVING ao final. Ainda por cima, tentei trocar o HAVING pelo WHERE só para ver o que acontecia (depois de já ter acertado o exercício) e deu um erro, visto que usei WHERE COUNT(p.id), o que gera erro, visto que o WHERE é usado antes de agrupar as linhas.
+O E3 demorei um pouco mais pois tentei filtrar a receita fazendo um == 0. No entanto, não aparecia nada de resultado. Foi ai que coloquei a receita no SELECT e vi que não era 0, mas sim um NULL. Abri o SQLBolt e li sobre LEFT JOINS e NULL. Então, apenas alterei a condição do HAVING.
+No E4 foi parecido. Usei o Gemini para me explicar o COALESCE. Deu um erro inicial pois estava nomeando o SUM de receita dentro do COALESCE, o que deu erro. Arrumei isso e deu tudo certo. Dei o ORDER BY so para testar se dava para usar o nome da variavel que criei.
+O E5 fiz bem rápido, sem JOIN algum.
+Em seguida parti para a parte de subconsulta e CTE.
+Dentro dos 10 minutos que tinha para ler teoria e tirar dúvidas, acredito que consegui entender o que são os dois e qual a diferença entre eles. Feito isso parti para os exercícios.
+Fiz o F1 sem muitos problemas, já que era uma sub consulta simples.
+O F2, acabei fazendo sem problemas tambem. Deu um erro de atencao minha em que chamei uma variavel que nao tinha declarado. Arrumei isso rapidamente e deu certo.
+O F3 fiz mais rapido ainda, ja que era praticamente uma adaptacao do F2.
+O F4 ja levei bem mais tempo. Usei o GPT para me ajudar com erros e ele me ajudou a perceber que os CTEs devolvem tabelas. Logo, na query principal, devo trata-los como tabelas normais. Isso era algo que es nao estava pensando, e ficava chamando variaveis delas sem colocar as tabelas no FROM ou usar subconsultas. O exercicio demorou mais saiu.
+O F5, achei bem confuso usando o CTE. Tentei fazer dois e JOIN eles na query principal, mas acabei nao conseguindo testar isso por conta do tempo teto que tinha nesse exercicio. Esses exercicios mais complexos acabam ficando muito confusos devido a quantidade enorme de linhas e informacao. Tambem, nem me esforcei em arredondar para duas casas decimais. Era o menor dos meus problemas.
+
+**Onde travei**
+Não diria que travei, mas realmente levei bastante tempo no F4 e F5 quebrando a cabeça em como escrever o código, quais variávei colocar no SELECT, se eu deveria JOIN as CTEs, entre outros.
+
+**O que ainda não entendo**
+Não entendo ainda como interpretar um grafo do git. Olhe como ficou meu grafo do exercicio que estava como pendencia:
+*   4767367 (HEAD -> main) Conflito arrumado
+|\  
+| * 0af118b (branch2) Mudanca teste
+| * 0ee5e66 Alteracao no teste.md
+* | 5378d6b (branch1) Saroba!
+|/  
+* 8ca381f Commit inicial
+Não sei ler isso e não sei dizer se está como o esperado.
+Não é que não entendo, mas queria saber como fica uma tabela apos um LEFT JOIN. Fiquei curioso para saber como ficam as linhas que não tem correlação com outra.
+Não entendi a intenção do Claude quando ele disse "A diferença entre COUNT(*) e COUNT(coluna) é o assunto do exercício.", uma vez que nem pensei em usar o COUNT(*) no exercício (deveria ter pensado?).
+Também, não lembro se cheguei a completar o exercício 6. Mas se consegui, em algum outro dia da Fase1, tenho certeza que eh mais fácil do que usando CTE e subconsulta.
+
+**Sensação vs. resultado**
+Tirando o F4 e F5, acredito que fui bem. Esses dois exercícios me deixaram meio confuso.Tive que pensar bastante e parar para ver o que estava escrevendo varias vezes. Eles me pegaram hoje.
+
+**Pendências**
+Parte de HTTP do diagnostico
