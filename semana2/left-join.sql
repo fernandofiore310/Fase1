@@ -66,3 +66,30 @@ GROUP BY cidade
 HAVING COUNT(id) > 1
 ORDER BY COUNT(id) DESC
 ;
+
+-- T1 — SELECT * sem GROUP BY
+-- Conclusão: Nas colunas de pedidos de Gabi, aparecem valores vazios, ja que nao tem compatibilidade alguma com a tabela pedidos quando se coloca os ids no ON.
+
+SELECT *
+FROM clientes c
+LEFT join pedidos p ON c.id=p.cliente_id
+;
+
+-- T2 — COUNT(*) ao inves de COUNT(p.id)
+-- Conclusão: Gabi aparece com 1 ao inves de 0. O problema eh que nao entendi o porque isso acontece.
+
+SELECT c.nome, COUNT(*) numero_pedidos
+FROM clientes c
+LEFT JOIN pedidos p ON c.id= p.cliente_id
+GROUP BY c.id
+;
+
+-- T3 — WHERE p.id IS NULL
+-- Conclusão: Esse WHERE funciona pois os valores estao como NULL pos JOIN. Como nao tem GROUP BY, o COUNT nao foi aplicado ainda e nada foi transformado em 0.
+-- No entanto, meu problema foi que quando tirei o GROUP BY, Hugo sumiu da resposta, o que achei bem estranho.
+
+SELECT c.nome, COUNT(p.id) numero_pedidos
+FROM clientes c
+LEFT JOIN pedidos p ON c.id= p.cliente_id
+WHERE p.id IS NULL
+;

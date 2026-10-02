@@ -78,22 +78,44 @@ FROM media_pedidos
 -- O erro de falta de atencao foi que escrevi  WITH valores_pedidos AS ( SELECT p.id, c.id cliente_id, SUM(i.quantidade*i.pre com o c.id ao inves do p.cliente_id que era o que tinha em mente. Dormi feio!
 -- Documento nao vai rodar por conta desse exercicio
 
+-- WITH valores_pedidos AS (
+-- SELECT p.id, c.id cliente_id, SUM(i.quantidade*i.preco_unitario) valor_pedido
+-- FROM itens i
+-- JOIN pedidos p ON i.pedido_id=p.id
+-- GROUP BY p.id
+-- ),
+-- media_clientes AS (
+-- SELECT c.id, c.nome, AVG(SUM(i.quantidade*i.preco_unitario)) media_cliente
+-- FROM itens i
+-- JOIN pedidos p ON i.pedido_id=p.id
+-- JOIN clientes c ON p.cliente_id=c.id
+-- GROUP BY p.id
+-- )
+-- SELECT v.id, m.nome, v.valor_pedido, m.media_cliente
+-- FROM valores_pedidos v
+-- JOIN media_clientes m ON v.cliente_id=m.id
+-- WHERE v.valor_pedido > m.media_cliente
+-- ORDER BY v.id DESC
+-- ;
+
 WITH valores_pedidos AS (
-SELECT p.id, c.id cliente_id, SUM(i.quantidade*i.preco_unitario) valor_pedido
+SELECT p.id, p.cliente_id, SUM(i.quantidade*i.preco_unitario) valor_pedido
 FROM itens i
 JOIN pedidos p ON i.pedido_id=p.id
 GROUP BY p.id
+ORDER BY p.id
 ),
-media_clientes AS (
-SELECT c.id, c.nome, AVG(SUM(i.quantidade*i.preco_unitario)) media_cliente
+medias_pedidos AS (
+SELECT c.id, c.nome, ROUND(AVG(i.quantidade*i.preco_unitario), 2) media
 FROM itens i
 JOIN pedidos p ON i.pedido_id=p.id
 JOIN clientes c ON p.cliente_id=c.id
-GROUP BY p.id
+GROUP BY c.id
+ORDER BY c.id
 )
-SELECT v.id, m.nome, v.valor_pedido, m.media_cliente
-FROM valores_pedidos v
-JOIN media_clientes m ON v.cliente_id=m.id
-WHERE v.valor_pedido > m.media_cliente
-ORDER BY v.id DESC
+SELECT vp.id, mp.nome, vp.valor_pedido, mp.media
+FROM valores_pedidos vp
+JOIN medias_pedidos mp ON vp.cliente_id=mp.id
+WHERE vp.valor_pedido > mp.media
+ORDER BY vp.id ASC
 ;
