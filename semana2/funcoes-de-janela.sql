@@ -72,3 +72,43 @@ JOIN pedidos p ON c.id=p.cliente_id
 GROUP BY c.id
 ORDER BY numero_pedidos DESC
 ;
+
+-- G4
+-- Tempo: 9min50s
+-- Esperado (na mão, antes de rodar): conferir no saida esperada
+-- Conferência: bateu.
+-- Consulta: Tirei uma duvida com o Claude sobre ordenacao dos resultados, pois tinha esquecido que tinha a coluna categoria na tabela de produtos.
+-- (explicação, quando o exercício pedir)
+
+SELECT
+pr.categoria,
+pr.nome,
+SUM(i.quantidade*i.preco_unitario) receita_produto,
+RANK() OVER (
+    PARTITION BY pr.categoria
+    ORDER BY SUM(i.quantidade*i.preco_unitario) DESC
+) AS posicao
+FROM itens i
+JOIN produtos pr ON i.produto_id=pr.id
+GROUP BY pr.id
+ORDER BY pr.categoria, posicao
+;
+
+-- G5
+-- Tempo: 18min30s
+-- Esperado (na mão, antes de rodar): conferir no saida esperada
+-- Conferência: bateu.
+-- Consulta: Tive que mandar umas duvidas para o Gemini, pois realmente estava com problemas uma hora. Ele me ajudou a resolver.
+-- (explicação, quando o exercício pedir)
+
+SELECT
+SUBSTR(p.data, 1, 7) mes,
+SUM(i.quantidade*i.preco_unitario) receita_mes,
+SUM(SUM(i.quantidade*i.preco_unitario)) OVER (
+    ORDER BY SUBSTR(p.data, 1, 7)
+)
+FROM itens i
+JOIN pedidos p ON i.pedido_id=p.id
+GROUP BY SUBSTR(p.data, 1, 7)
+ORDER BY SUBSTR(p.data, 1, 7)
+;

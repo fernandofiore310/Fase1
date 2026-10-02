@@ -140,3 +140,33 @@ Tirando o F4 e F5, acredito que fui bem. Esses dois exercícios me deixaram meio
 
 **Pendências**
 Parte de HTTP do diagnostico
+
+### 2026-10-01 — Quinta (4h)
+
+**O que fiz**
+Comecei fazendo o exercicio F5 novamente. Primeiro, dessa vez, escrevi as queries de cada um dos CTEs que eu pretendi usar antes, de modo que eu analisasse os resultados e saber o que saia deles. A query de pedidos com seus respectivos valores estava certa (conferi fazendo conta), assim como a de media de clientes, onde para testar, calculei a media de Bruno, que dava 320 por pedido (ele fez os pedidos 2, 8 e 14, que calculei a media da seguinte maneira: (300+45+35+900)/4=320. Pensando agora, deveria ter dividido por 3 nao?) e estava batendo com o resultado da minha query.
+O problema foi que quando juntei tudo, o meu resultado estava bem diferente da saida esperada, mas nao pelos valores (esses estavam batendo), mas pelas medias, que estavam bem diferentes. Fiquei sem tempo para ver o que aconteceu, considerando que ja tinha usado os 25 minutos.
+Em seguida, parti para os testes rapidos, onde usei um pouco mais dos 10 minutos necessarios (mais porque estava usando o terminal para rodar o primeiro, o que consumiu bastante tempo. Depois percebi que era bem mais rapido fazer no arquivo direto). Mas ainda sim, acabei ficando com algumas duvidas, que vou esclarecer na outra parte desse log.
+Em seguida, peguei a pagina do sqlite.org e mandei para o Gemini, e pedi para ele fazer uma aula/resumo para mim dos topicos 1, 2 e funcoes de ranking. Li isso e parti para os exercicios.
+O G1, consegui entender como faze-lo e porque usar a funcao de janela. Olhei o resumo do gemini para pegar como escrever o corpo da funcao. Mas de resto desenrolei.
+O G2, acabei tendo que entender um pouco mais sobre o partition. Li a aual do gemini, e vi que teria que "partir" por cliente, visto que queria rankear os pedidos de CADA cliente.
+O G3 que levei mais tempo. Isso porque eu estava tentanto usar o PARTITION, quando na verdade nao precisava. Estava saindo um resultado estranho, e entao pedi para o Gemini me explicar como que eu saberia o que colocar no PARTITION e o que colocar no ORDER BY. O partition voce coloca o que voce quer "agrupar" e no order o que voce quer rankear/ordenar dentro desse agrupamento feito pelo partition. Foi ai que eu me liguei. Nao precisava usar partition, visto que queria rankear todos os clientes e nao as coisas dentro de cada cliente (sei que nao era o caso, mas estava partindo por id de clientes antes de perceber isso). Entao, tendo comentado as linhas com partition, rodei, porem estava invertido. Fabio estava com os numeros que Ana deveria estar e vice versa para todos os outros clientes. Foi ai que percebi que tinha que colocar um DESC nos order by dentro das janelas.
+O G4 eu tinha a ideia de como fazer. Entao nao foi muito dificil executar. O unico ponto foi que esqueci que existia essa coluna categoria de produtos, e elembrei depois de consultar o Claude. Mas de resto, sem problemas.
+O G5 ja achei mais dificl. Isso porque fiquei quebrando a cabeca em como fazer uma receita acumulada. Nao tinha trabalhado com janela com sum e order by, entao na minha cabeca foi bem estranho para entender como funciona essa receita acumulada. Tive que tirar duvidas com o Gemini para conseguir fazer.
+Nao fiz o G6
+
+**Onde travei**
+Unica parte que travei foi na receita acumulada do G5, que tive que mandar o que tinha escrito para o Gemini e entender porque nao estava dando o mesmo resultado do saida-esperada.md.
+
+**O que ainda não entendo**
+Não entendi porque Gabi apareceu com 1 quando usei o COUNT(*).
+Tambem nao entendi porque o nome do Hugo sumiu da resposta quando tirei o GROUP BY da query. Primeiramente tinha trocado o HAVING pelo WHERE IS NULL, mantendo o GROUP BY, e apareceu Gabi e Hugo no resultado. No entanto, quando tirei o GROUP BY, Hugo sumiu da resposta.
+Estou pegando a manha do partition e do order by nas janelas. Conteudo novo para mim. Nunca tinha visto isso de janelas.
+Nao entendi como o order by dentro da janela com uma funcao sum faz com que a soma seja acumulada. Nao entendi tambe m porque o exercicio so funcionou depois de um sum dentro de um sum.
+
+**Sensação vs. resultado**
+Tirando a demora no F5 e o G5, acredito que fui bem, considerando que nunca tinha visto esse conteudo na minha vida.
+
+**Pendências**
+Parte de HTTP do diagnostico
+Ex F5
