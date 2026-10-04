@@ -170,3 +170,28 @@ Tirando a demora no F5 e o G5, acredito que fui bem, considerando que nunca tinh
 **Pendências**
 Parte de HTTP do diagnostico
 Ex F5
+
+### 2026-10-03 — Sabado (2h)
+
+**O que fiz**
+Comecei pelo README.md do repositório da Fase0. A questão foi que rodei os comandos e imagino que tenha dado certo, visto que o arquivo python rodou e o de testes tambem, com os testes em verde.
+Em seguida, parti para a parte de mypy, onde pedi para o gemini me passar o que eu deveria colocar no pyproject.toml, e em seguida, o comando para roda-lo. Assim que rodei, vi os 13 erros e fui arrumando eles. No fim, arrumei todos e o mypy roda liso.
+Em seguida, mandei o conteudo de complexidade e de indices para o Gemini e pedi uma aula detalhada com exemplos. Pelos 15 minutos que eu tinha, fiquei tentando entender a materia, e entao, parti para os exercicios. 
+Primeira coisa que gostaria de falar sobre os exercicios foi uma confusao que o Claude fez: primeiro, ele me passou a funcao EXPLAIN com parenteses, que na real, nao existem, e tambem, no primeiro exercicio, quando criei o indice e deixei o DROP no final do arquivo, ele nao estava apagando o indice, logo estava saindo a pesquisa como SEARCH nos dois casos. O que fiz para dar o resultado esperado foi jogar o DROP como a primeira linha do arquivo. Ai apareceu um SCAN e um SEARCH.
+Mas, em relacao aos 4 exercicios, eu fiz todos e tudo esta documentado no arquivo .sql deles. Quero saber se as minhas explicacoes naqueles exercicios estao boas. Assim como mencionei la tambem, tive uma dificuldade para entender a questao do H3.
+Os exercicios de complexidade eu fiz todos. Pedi ajuda para o chat, pois eu nao lembrava o que eram sets, e tambem nao sabia usar a funcao do time que o enunciado pedia, alem da funcao de busca binaria.
+
+**Onde travei**
+A unica parte que eu diria que travei foi na H3, na hora de escrever a explicacao. Como mencionei no exercicio, nao entendi porque um eh SEARCH e outro SCAN, alem do fato de um fazer SCAN com indice, que para mim nao era possivel existir algo assim.
+
+**O que ainda não entendo**
+Ainda nao entendo muito bem essa questao de ambiente virtual. Tipo, estava trabalhando nesse repositorio ate agora sem ativa-lo. E uma coisa que eu nao sei tbm sobre o assunto eh quando rodar o comando python3 -m venv venv. O que esse comando faz? Rodo ele apenas uma vez? quando nao usei o repositorio, ou quando ainda nao criei o ambiente? Por exemplo, clonei o Fase0 e tive que rodar isso. Mas na minha cabeca o ambiente ja estava criado no repositorio. Ou eh por conta do gitignore que tenho que rodar isso?
+Entendi os indices, mas ainda nao sei muito bem quando perceber que certa coluna precisa de um indice.
+Nao entendi a questao da primary key de itens e seu indice. E tambem nao entendi aquele SCAN com um COVERING INDEX do produto_id. Na minha cabeca o SCAN nao usava Index algum.
+Por fim, tambem nao entendi aquela pergunta de quando escolher lista, set ou busca binaria. Tipo entendo toda a questao da complexidade envolvida. Mas essa pergunta eh relacionada a quantidade de dados que vou manipular com um algoritmo. Alem disso, se listas sao tao ineficientes, porque se usam elas e nao sempre usar sets por exemplo?
+
+**Sensação vs. resultado**
+Fui ok hoje. Consegui os exercicios, mas fiquei com certas duvidas
+
+**Pendências**
+Ex F5
