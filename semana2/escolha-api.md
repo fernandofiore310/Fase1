@@ -1,0 +1,4 @@
+A API escolhida foi a BALLDONTLIE.
+Como vou usar a versao gratuita, nao tem muito o que explorar ali. Tenho acesso aos times, aos jogadores e aos jogos. Como era de se esperar, cada jogador tem um time, e cada jogo tem dois times.
+Nao tem muitos stats disponiveis, mas acredito que vai dar para dar uma analisada leve em alguns dados legais. Por exemplo, algo que eu pensei aqui que da pra fazer eh ver a media de pontos de cada time por temporada. Apenas um exemplo. Ou por exemplo, ver a media de altura dos jogadores de cada time e relacionar isso com pontos. Ou seja, times com jogadores mais altos, tendem a marcar mais pontos?
+Tipo, acho que existem possibilidades legais, mesmo com poucos dados. Da para pensar em bem mais coisas acredito, so dei dois exemplos do que da para fazer.
