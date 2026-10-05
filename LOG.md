@@ -195,3 +195,27 @@ Fui ok hoje. Consegui os exercicios, mas fiquei com certas duvidas
 
 **Pendências**
 Ex F5
+
+### 2026-10-03 — Domingo (3h)
+
+**O que fiz**
+Comecei pelo resumo de transacoes e sqlite em python que pedi para o gemini fazer. Dessa vez respondi as perguntas que tinham que ser respondidas. Acabei levando cerca de 10 minutos a mais do que o esperado, mas foi tranquilo.
+Em seguida, parti para os exercicios de transacoes em sql puro. O primeiro acabei demorando mais, pois estava tentando entender como funcionava o esquema de escrever transacoes em sql direto. Fiquei lendo, entendendo e conversando com o Gemini para tirar duvidas sobre o tema. Mas acredito que conseguir fazer os exercicios. Entendi que a transacao so vai executar tudo se todas as linhas estiverem corretas, caso contrario nao executa. Entendi o commit, que salva no banco e termina a transacao, e o rollback, que desfaz as mudancas e termina a transacao.
+Nos exercicios de sql em python, como se pode observar, levei bastante tempo, principalmente no primeiro. Isso porque estava tentando entender tudo para conseguir fazer o exercicio sozinho. Entao, junto com o Gemini e a documentacao do sqlite3, tive que entender o que era isso de memoria e como usar o executescript(). Fui atras de como executar uma instrucao, ler os resultados de queries e como escrever de maneira correta uma busca usando o placeholder. Fiz os 4 exercicios.
+Por fim, escolhi a api e li parte da documentacao dela.
+
+**Onde travei**
+Hoje, acredito que nao travei em nada. Consegui fazer as coisas, e fui tirando duvidas com o Gemini sobre conteudo.
+
+**O que ainda não entendo**
+Nao entendi muito bem ainda a questao do arquivo .db. Tipo entendo que ele eh a base de dados, mas quando perguntei ao Gemini porque eu nao poderia abrir a conexao com ele ao inves do arquivo .sql,eu entendi que era para nao alterar nada nesse arquivo. No entanto, na minha cabeca, a base de dados eh algo que precisa estar sempre sendo alterado. 
+Queria entender um pouco melhor na pratica o que eh o cursor e a conexao. Por que teria que me conectar com uma base de dados, que esta baixada no disco da minha maquina?
+Queria entender porque em alguns casos, tipo na doc do sqlite usam res = cursor.execute() e depois usam o res.fetchall(). Nos exercicios eu nao usei assim e funcionou. Alem disso, no ex4, quando usei mais de um execute, nao sabia se precisava chamar algum de res, ou todos de res1, res2, ...
+Por fim, queria entender melhor sobre APIs. O que elas sao? Para que sao usadas? Por que falam tanto delas? Elas estao muito populares. Alem disso, quando estava lendo a documentacao da API, ele falava sobre query parameters. Qual a relacao delas com banco de dados? Elas retornam dados, eh isso? 
+
+**Sensação vs. resultado**
+Acho que fui bem hoje. Consegui fazer os exercicios.
+
+**Pendências**
+Ex F5
+Nao sei o resto
