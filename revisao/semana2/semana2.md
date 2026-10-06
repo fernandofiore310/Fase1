@@ -1,3 +1,9 @@
+### Volta na segunda
+Questoes 6 e 8 desse arquivo. Alem de: 
+G3 com desempate;
+G5 reescrita com CTE;
+cabeçalho da H4.
+
 ### O que o SQLite faz quando uma coluna do SELECT não está nem no GROUP BY nem dentro de uma agregação?
 O SQLite vai apenas escolher o primeiro valor calculado e colocar ele como valor daquela coluna. Entao, na nossa base, caso queria calcular a receita, mas esqueca de usar o SUM, ele apenas vai colocar a primeira receita que ele calcular como valor da coluna.
 

@@ -219,3 +219,23 @@ Acho que fui bem hoje. Consegui fazer os exercicios.
 **Pendências**
 Ex F5
 Nao sei o resto
+
+### 2026-10-03 — Segunda (1h)
+
+**O que fiz**
+Comecei pelas perguntas teoricas sem consulta. Fiz todas elas, no entanto a 6 eu nao consegui pensar na hora, entao pulei, e a 8 nao deu tempo de fazer, mas imagino que nao ia conseguir.
+Depois fui para os exercicios praticos. Dessa vez, o que fez eu conseguir acertar o resultado do F5 foi o JOIN com a primeira CTE na segunda CTE. Esse foi um diferencial que cortou tempo e me deixou menos confuso. Tambem, rodei as CTES como queries para ver se estavam como eu queria. Assim que as duas estavam boas, escrevi a query final rapidao.
+O G5, eu lembrava do double sum, mas deszsa vez fez mais sentido, pois como eh o acumulado, tinha que fazer a sum das receitas (que era outro sum). Se nao tivesse o erro do SELECT e declaracoes, seria mais facil vizualizar caso eu escrevesse SUM(receita_mes). O exercicio estava dando uma linha de resultado, quando lembrei de por o GROUP BY, ai deu certo. Nao precisava do partition, pois nao queria realizar uma soma com um grupo especifico de linhas, mas sim com todas as linhas.
+O G4 foi o que fiz mais rapido. Esse acredito que nao tive muito problema na construcao.
+
+**Onde travei**
+Travei nas questoes 6 e 8 teoricas. Mais a 6 pois a 8 nao tive muito tempo.
+
+**O que ainda não entendo**
+
+
+**Sensação vs. resultado**
+Acho que fui bem hoje. Consegui fazer os exercicios. Menos os dois teoricos que escaparam da minha cabeca.
+
+**Pendências**
+Nao sei
