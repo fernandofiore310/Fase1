@@ -196,7 +196,7 @@ Fui ok hoje. Consegui os exercicios, mas fiquei com certas duvidas
 **Pendências**
 Ex F5
 
-### 2026-10-03 — Domingo (3h)
+### 2026-10-04 — Domingo (3h)
 
 **O que fiz**
 Comecei pelo resumo de transacoes e sqlite em python que pedi para o gemini fazer. Dessa vez respondi as perguntas que tinham que ser respondidas. Acabei levando cerca de 10 minutos a mais do que o esperado, mas foi tranquilo.
@@ -220,7 +220,7 @@ Acho que fui bem hoje. Consegui fazer os exercicios.
 Ex F5
 Nao sei o resto
 
-### 2026-10-03 — Segunda (1h)
+### 2026-10-05 — Segunda (1h)
 
 **O que fiz**
 Comecei pelas perguntas teoricas sem consulta. Fiz todas elas, no entanto a 6 eu nao consegui pensar na hora, entao pulei, e a 8 nao deu tempo de fazer, mas imagino que nao ia conseguir.
@@ -239,3 +239,28 @@ Acho que fui bem hoje. Consegui fazer os exercicios. Menos os dois teoricos que 
 
 **Pendências**
 Nao sei
+
+### 2026-10-06 — Terça (2h)
+
+**O que fiz**
+Comecei criando o repositorio e as minhas contas no Leet e NeetCode. Feito isso, clonei ele aqui e comecei a trabalhar. 
+Li a mini aula do Claude explicando o uso de dois ponteiros, e parti para os exercicios.
+Comecei pela primeira questao. Nao tive muitos problemas, mas imagino que tenha jeitos maneiras que otimizem mais o codigo.
+A segunda tambem tinha claro na cabeca como resolver. O meu problemas foi as pontuacoes e o espaco, que antes estava tentando colocar tudo em uma lista, ate que achei uma funcao na internet que ajudava bastante com isso. Meu problema com a maneira como resolvi esse exercicio foi que usei dois loops. Sinto que nao precisava usar. Mas na hora nao pensei.
+Parti para o terceiro. Esse nao consegui dentro dos 25 minutos. Estava tentando usar dois ponteiros na mesma direcao, no entanto, estava nada eficiente, e fiquei batendo cabeca. Vi o video do neetcode, e vi que o dev usava ponteiros em direcoes opostas. Nao vi a resolucao dele em codigo. Apenas apliquei o raciocinio dele. Ai deu certo.
+Por fim, fiz o ultimo com ponteiros na mesma direcao. Esse fiz rapido. Meu unico problema foi que na primeira tentativa, acabei extrapolando o tamanho do ponteiro i2. Assim que arrumei, o ex passou.
+
+
+**Onde travei**
+Sinto que nao travei em nada hoje.
+
+**O que ainda não entendo**
+Sinto que entendi o conteudo de hoje. Claro, tenho muito o que melhorar. Mas sinto que entendi.
+
+**Sensação vs. resultado**
+Acho que fui ok hoje. Tirando um que extrapolei o tempo, o restante consegui fazer.
+
+**Pendências**
+quarta, primeiros 30 minutos: correções do sql-no-python.py (import, aspas na P3, fetchall duplo, anotações de retorno, carga da base no __main__ e a P4 refeita);
+segunda, 12/10: a lista "Volta" completa, como acima;
+contínuo: o DUVIDAS.md.
