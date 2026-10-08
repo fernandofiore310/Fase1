@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
     # Exercicio P2 feito em 7min41ss
     pedidos_cliente(conn, 1)
-    pedidos_cliente(conn, 1)
+    pedidos_cliente(conn, 7)
 
     # Exercicio P3 feito em 10min20s
     # Antes: Imagino que a versao com a concatencao vai pegar os dados de Ana, visto que logo depois do nome dela tem uma aspas simples, o que faz com que o banco de dados ignore o que vem depois dela. Ja, quando usarmos o placeholder, acredito que nao sera retornado nada, visto que ele vai considerar a string inteira e nao vai encontrar o nome Ana' OR '1'='1 na base de dados.
@@ -128,7 +128,8 @@ if __name__ == "__main__":
     id_cliente = 7
     data_pedido = '2026-08-30'
     lista_intens = [(3, 1, 120), (4, 2, 120)]
+    id_pedido2 = 16
     lista_intens2 = [(3, 1, 120), (3, 2, 120)]
     valida_transacao(conn, id_pedido, id_cliente, data_pedido, lista_intens)
-    valida_transacao(conn, id_pedido, id_cliente, data_pedido, lista_intens2)
+    valida_transacao(conn, id_pedido2, id_cliente, data_pedido, lista_intens2)
 
