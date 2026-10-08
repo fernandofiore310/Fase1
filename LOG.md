@@ -264,3 +264,28 @@ Acho que fui ok hoje. Tirando um que extrapolei o tempo, o restante consegui faz
 quarta, primeiros 30 minutos: correções do sql-no-python.py (import, aspas na P3, fetchall duplo, anotações de retorno, carga da base no __main__ e a P4 refeita);
 segunda, 12/10: a lista "Volta" completa, como acima;
 contínuo: o DUVIDAS.md.
+
+### 2026-09-30 — Quarta (3h)
+
+**O que fiz**
+Comecei pelas correcoes do sql em python. Nao tive problema em nenhuma correcao, exceto a do P4, pois nao tinha feito o exercicio direito, e tive que entender o enunciado inteiro. Acredito que consegui escreve-lo bem feito, mas, precisei de 15 minutos adicionais para termina-lo. Achei o esqueleto do exercicio meio estranho. Tipo isso do id_pedido vir separado. Estava dando erros, debuguei com o ChatGPT, e ele me deu essa ideia de ter que fazer um loop para adicionar o id_pedido na lista itens.
+Em seguida, fui para a parte de criar um repositorio novo. Aqui, criei ele tranquilo. Na parte do pyproject.toml que levei mais tempo. Basicamente fui copiando ele do meu repositorio Fase0. Alem disso, quando fui rodar o pip install -e . deu um problema no hatchling, que nao entendi como resolvia, entao pedi ajuda para o ChatGPT para resolver o bug comigo. O resultado disso foi aquele ultimo bloco do arquivo .toml que resolveu o problema que estava dando. Em seguida, rodei de novo, e deu um problema que nao estava encontrando o ruff. Falei com o GPT de novo, e nao havia rodado o pip para o grupo dev. Mas, no fim, acredito que deu tudo certo.
+Parti entao para a base que iria usar no projeto. Na parte de leitura dirigida acredito que foi tudo bem. Unica coisa que nao ficou claro para mim eh que a API menciona que eh de 1946-current. Mas o que eh current? Mas de resto, acredito que foi bom, ate para desenvolver um senso critico de o que usar e o que nao usar. Era muito facil eu criar as tabelas iguais as da API. No entanto, pensar no que realmente eu iria usar foi util.
+A modelagem foi o proximo passo. Comecei pelo desenvolvimento das tabelas, que acredito que foi bom, consegui definir bem o que queria usar. Na M2 acredito que consegui fazer da maneira correta. No M3 tive que corrigir alguns erros, mas acho que a estrutura ficou boa. O problema foi que no final, apareceram dois erros (Runtime error near line 3: UNIQUE constraint failed: teams.id (19); Runtime error near line 7: UNIQUE constraint failed: games.id (19)) com esse erro de unique, que nao entendi. Alem disso, o terminal so reportou o erro do Null e da foreign key, nao mencionou o erro do CHECK, o que achei estranho.
+O M4 estava corrido, entao ao inves de responder com quais colunas e tabelas iria resolver tres questoes, escrevi mais questoes extras que adoraria dar uma olhada ao longo do projeto. Gostei bastante pois consegui ter bastante senso critico e questionar os dados. Foi interessante.
+
+**Onde travei**
+Não diria que travei hoje. O P4 que fiquei mais tempo pensando, mas nao travei.
+
+**O que ainda não entendo**
+Achei meio estranho isso do id_pedido vir separado da lista itens no P4. 
+Ainda tenho algumas coisas do pyproject.toml que nao estao 100% na minha cabeca, qual o seu papel, como a diferenca entre o dependencies do project e o dev do dependency-group, alem dessa questao do build-system, que deu problema hoje.
+O pip install -e baixa o .toml no ambiente virtual? Se sim, para que eu quero isso?
+Os erros do M3 e porque eles apareceram. Por que o do CHECK nao apareceu tambem?
+
+**Sensação vs. resultado**
+Acho que fui bem hoje. Consegui ver bem de perto a API e entender melhor a base, alem de questionar bastante ela.
+
+**Pendências**
+segunda, 12/10: a lista "Volta" completa, como acima;
+contínuo: o DUVIDAS.md.
