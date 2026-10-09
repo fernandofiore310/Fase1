@@ -265,7 +265,7 @@ quarta, primeiros 30 minutos: correções do sql-no-python.py (import, aspas na 
 segunda, 12/10: a lista "Volta" completa, como acima;
 contínuo: o DUVIDAS.md.
 
-### 2026-09-30 — Quarta (3h)
+### 2026-10-07 — Quarta (3h)
 
 **O que fiz**
 Comecei pelas correcoes do sql em python. Nao tive problema em nenhuma correcao, exceto a do P4, pois nao tinha feito o exercicio direito, e tive que entender o enunciado inteiro. Acredito que consegui escreve-lo bem feito, mas, precisei de 15 minutos adicionais para termina-lo. Achei o esqueleto do exercicio meio estranho. Tipo isso do id_pedido vir separado. Estava dando erros, debuguei com o ChatGPT, e ele me deu essa ideia de ter que fazer um loop para adicionar o id_pedido na lista itens.
@@ -285,6 +285,29 @@ Os erros do M3 e porque eles apareceram. Por que o do CHECK nao apareceu tambem?
 
 **Sensação vs. resultado**
 Acho que fui bem hoje. Consegui ver bem de perto a API e entender melhor a base, alem de questionar bastante ela.
+
+**Pendências**
+segunda, 12/10: a lista "Volta" completa, como acima;
+contínuo: o DUVIDAS.md.
+
+### 2026-10-08 — Quinta (4h)
+
+O que fiz:
+Comecei arrumando as coisas que estavam erradas nos arquivos. Nessa parte acredito que foi tranquilo. Consegui fazer tudo que eu precisava em um tempo menor do que o esperado. 
+Em seguida, pedi uma aula para o GPT e li a documentacao do request dentro dos 30 minutos que tinha. Deu para pegar uma base boa e partir para os exercicios
+Nos exercicios de exploracao, o primeiro levei mais tempo pois estava vendo como usava a chave da API da maneira correta e tambem estava procurando a maneira de extrair os dados da requisicao get que fiz. Percebi que realmente a base nao conta so com times da nba, mas tambem com outros times, que imagino que sejam times antigos da nba, e times do mundo todo, como flamengo e real madrid. O exercicio 2 fiz bem rapido, uma vez que nas minhas tentativas de usar a chave no H1, acabei cometendo esse erro, entao ja sabia o que esperar e sabia fazer tambem. O H3 consegui fazer tambem. Como mencionei no cabecalho do exercicio, estava testando com um numero que gerava erro no servidor (status 500). Assim qeu percebi isso, mudei o numero e consegui capturar o status que eu queria. No H4, a unica coisa que aconteceu foi a questao dos erros do requests. Nao sabiam que eles tinham um tipo de erro diferente, entao, quando entendi isso consegui arrumar. No H5, explorei bem a base, mas vou poupar tempo aqui, ja que deixei todas as observacoes que fiz dos players no cabecalho do exercicio. O exercicio 6 foi muito bom para entender como o cursor e o per_page funcionam. Depois de testar algumas vezes com eles, consegui compreender os seus funcionamentos.
+Em seguida, parti para o exercicio do cliente. Criei a funcao que precisava, do jeito que eu sabia fazer. Considerei o per_page padrao, e adicionei o cursor como argumento opcional. Nesse arquivo, so tive problemas com a tipagem (topico que vou falar mais para frente). Alem disso, o enunciado inicial do exercicio nao estava muito claro, entao, inicialmente, estava escrevendo um bloco __main__ para realizar os testes. Depois que entendi melhor o enunciado, consegui fazer melhor. Fui entao para o arquivo de testes, onde consegui fazer o exercicio pegar os jogadores baseados nos seus ids. Tive que consultar a internet com questoes de set, de como realizar a interseccao entre eles principalmente. Tendo feito isso, o arquivo rodou sem problemas e o assert passou, quando usei dois cursors diferentes, claro.
+Rodei o ruff, com ruff check. Ele encontrou tres pontos que davam para consertar (estavam com o *) e entao rodei o ruff check --fix e ele arrumou tudo.
+O grande problema foi no mypy, que inicialmente encontrou tres erros no cliente.py, e 20, se nao me engano, no explore_cliente.py. Nao tive tempo de corrigir todos. So consegui corrigir um do cliente.py, que era na tipagem do dicionario de argumento da funcao.
+
+Onde travei:
+Nao diria que travei. Quebrei bem a cabeca, fui atras das coisas, mas nao teve nada que eu nao tinha a menor ideia de como fazer.
+
+O que eu ainda nao entendo:
+A coisa que esta me incomodando eh essa base, principalmente por se ter mais de uma versao de alguns jogadores. Nao sei como vou filtrar isso, e, pelo que imagino, todas as analises, com jogadores, fiquem restritas a temporada mais atual da base de dados.
+
+Sensacao vs. resultado
+Acredito qeu fui bem hoje. Consegui entender coisas do requests e fazer os exercicios que tinham que ser feitos.
 
 **Pendências**
 segunda, 12/10: a lista "Volta" completa, como acima;
