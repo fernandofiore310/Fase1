@@ -312,3 +312,23 @@ Acredito qeu fui bem hoje. Consegui entender coisas do requests e fazer os exerc
 **Pendências**
 segunda, 12/10: a lista "Volta" completa, como acima;
 contínuo: o DUVIDAS.md.
+
+### 2026-10-09 — Sexta (2h)
+
+O que fiz:
+Comecei pela correcao dos arquivos. Entendi que era apenas para levantar uma excecao no caso da laeitura da chave, entao arrumei com um bloco if apenas. Coloquei o raise_status, e realmente, sem ele nao tem sentido algum. Entendi que era para subir um erro caso viesse um status que nao queria. Arrumei o except timeout, e acho que entendi um pouco melhor a estrutura. Na minha cabeca, quando entrava no except, o codigo parava. O que nao era o caso. Arrumei o params, o cursor e a questao do endpoint. Fiquei mais tempo arrumando o mypy no cliente.py e no explora_cliente.py. Depois que me liguei que as funcoes no explora recebiam uma lista de dicionarios, e consegui tirar alguns erros. Alem disso, arrumei a escrita de variaveis com tipagem, algo que nao sabia muito e que nao tinha feito ainda. Arrumei o gitignore, mas ai o tempo acabou. Dei o commit dentro da pasta src, por isso que tive que dar outro commit depois e por isso que algumas coisas nao subiram de primeira.
+Em seguida, parti para o retry. Entendi o seu ponto, que basicamente eh, para erros que sabemos a procedencia e nao estao no controle do desenvolvedor, devemos tentar de novo, pois sabemos que nao tem a ver com codigo quebrado. O problema foi a implementacao, que quebrei a cabeca, mas foi bem legal. No comeco, pensava que ia usar uma funcao de uma binlioteca especifica, mas depois vi que tinha que montar na mao. Foi bem interessante. Nesse exercicio deu para entender bem a estrutura do try/except: quero que o bloco que esta no try levante erros, exceto se os erros forem os especificados no bloco except, nesse caso, trate-os de uma maneira diferente, ou faca algo, e siga o codigo. No nosso caso, se fosse de timeout ou conexao, queriamos tentar novamente a requisicao. Nos blocos elif, estava usando or, o que estava bugando o codigo. Quando percebi isso, arrumei e deu certo. O problema eh que o tempo estava curto e nao consegui testar para diferentes casos. Queria ter testado mais.
+
+Onde travei:
+Nao diria que travei hoje. Apenas fiquei bastante tempo pensando em como desenvolver uma solucao para o problema do retry.
+
+O que eu ainda nao entendo:
+A questao do dict[str, Any], no sentido de, porque temos que colocar um tipo (no nosso caso str) mais o Any? Alem disso, o Any eh meio que um 'cheat code' contra a tipagem, pois fala que pode ser qualquer coisa. Isso, na minha cabeca, vai meio que contra a tipagem nao? Alem disso, quando uso dict e quando tenho que importar Dict de typing? Ou na minha versao do python nao preciso mais importar?
+O retry-after me deixou pensando. Dependendo da API, ele pode vir bem diferente. Por exemplo, nessa api ele vem em minusculas. Talvez em outra venha sem o hifen. Como posso generalizar isso para qualquer api?
+
+Sensacao vs. resultado
+Acredito que fui bem hoje. Fiz os exercicios, mas em compensacao, nao terminei nada com folga de tempo hoje.
+
+**Pendências**
+segunda, 12/10: a lista "Volta" completa, como acima;
+contínuo: o DUVIDAS.md.
