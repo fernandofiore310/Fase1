@@ -21,6 +21,7 @@ SELECT p.id, m.nome, p.valor_pedido, m.media_cliente
 FROM valores_pedidos p
 JOIN media_pedidos m ON p.cliente_id=m.id
 WHERE p.valor_pedido > m.media_cliente
+ORDER BY p.id
 ;
 
 -- G5
@@ -40,6 +41,7 @@ SUM(SUM(i.quantidade*i.preco_unitario)) OVER (
 FROM itens i 
 JOIN pedidos p ON i.pedido_id=p.id
 GROUP BY SUBSTR(p.data, 1, 7)
+ORDER BY mes
 ;
 
 -- G4
@@ -60,5 +62,5 @@ RANK() OVER (
 FROM itens i
 JOIN produtos pr ON i.produto_id=pr.id
 GROUP BY pr.id 
-ORDER BY pr.categoria
+ORDER BY pr.categoria, posicao
 ;
