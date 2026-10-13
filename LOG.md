@@ -332,3 +332,30 @@ Acredito que fui bem hoje. Fiz os exercicios, mas em compensacao, nao terminei n
 **Pendências**
 segunda, 12/10: a lista "Volta" completa, como acima;
 contínuo: o DUVIDAS.md.
+
+### 2026-10-12 — Segunda (2,5h)
+
+O que fiz:
+Comecei hoje arrumando os bugs do cliente.py. A principio, nao tive problema em arrumar nenhum. O claude meio que falou o que eu tinha que arrumar e como arrumar e todos, entao acredito que nao tive muitos problemas. Quando os arrumei, tanto o ruff quanto o mypy estavam passando. So precisei de uma ajuda do claude para criar a minha prorpria excecao na try_retry().
+Depois fui para os testes do explore_retry.py. Nele, acredito que nao tive problemas tambem. A unica coisa que precisei de ajuda foi em como lancar a excecao para o R2 nao ficar travado com erro. Mas tirando isso, foi tranquilo.
+Em seguida, arrumei a resposta da pergunta 2 do http.md, que agora acredito que esta fazendo mais sentido.
+Depois, na revisao espacada, respondi as questoes de escrita. Acredito que consegui responde-las. A do set acabei pensando um pouco mais, mas consegui responder acredito.
+Os exercicios de algoritmo foi mais trabalhoso. O 167 eu lembrava da solucao, entao acredito que foi tranquilo. O 26 que para mim foi problema, pois eu queria ir adicionando numa lista nova. No entanto, percebi que ia ter que, eventualmente verificar se o numero repetido estava na lista nova, e eu ia fazer isso com is in, o que eh uma verificacao O(n), o que ia ferrrar o proposito do meu codigo. Entao preciso pensar novamente.
+Ja no 125, usei o isalnum() e consegui deixar o codigo O(n), sem precisar de um segundo loop para construcao de uma string nova.
+No de SQL, no G3 especificamente, nao sei o que aconteceu. Isso porque, acredito que tinha feito da ,maneira correta, ordenando dentro de cada funcao de janela por COUNT(pedidos.id) e depois por cliente.nome DESC, e ordenando a query geral pelos mesmo parametros. No entanto, tanto os clientes sairam ordenados ao contrario, como os ranks (todos) ficaram de um jeito diferente do que eu estava esperando. Nos 10 minutos que tinha, nao consegui descobrir o por que.
+Os outros exs consegui arrumar tranquilo.
+Alem disso, esqueci de colocar os exercicios que devo voltar segunda que vem.
+
+Onde travei:
+Nao diria que travei hoje.
+
+O que eu ainda nao entendo:
+Nao sei porque o meu G3 deu errado. Na minha cabeca era pra ter dado certo.
+Nao consegui pensar em como fazer o 26 em O(n). Talvez com mais tempo eu conseguisse pensar em algo.
+
+Sensacao vs. resultado
+Acredito que fui bem hoje. Fiz os exercicios, mas em compensacao, nao terminei nada com folga de tempo hoje.
+
+**Pendências**
+segunda, 12/10: a lista "Volta" completa, como acima;
+contínuo: o DUVIDAS.md.
