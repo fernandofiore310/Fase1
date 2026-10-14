@@ -359,3 +359,27 @@ Acredito que fui bem hoje. Fiz os exercicios, mas em compensacao, nao terminei n
 **Pendências**
 segunda, 12/10: a lista "Volta" completa, como acima;
 contínuo: o DUVIDAS.md.
+
+### 2026-10-13 — Terca (6h)
+
+O que fiz:
+Comecei hoje fazendo os exercicios do LeetCode. Comecei pelo 26, e mais uma vez, nos 15 minutos que tinha, nao consegui faze-lo. Tinha feito de uma maneira em que eu trabalhava com dois ponteiros, que saiam do mesmo lugar. No entanto, nao tinha pensado em deixar o meu ponteiro i1 sempre alinhado com o lugar que um numero novo deveria entrar. Alem disso, eu estava usando uma lista nova para colocar os valores, no entanto, no enunciado do exercicio, ele pedia para nao usar memoria extra. Logo, tive que ver o video, e apliquei a ideia do video no meu codigo. Fez bastante sentido o jeito que o desenvolvedor fez. Achei bom. Em seguida, parti para o 217, e esse achei tranquilo. A minha ideia foi criar um set, percorrer a lista, ver se aquele numero estava no set: caso estivesse, ja retornava True, caso nao estivesse, adicionava. Se o programa percorresse a lista inteira e nenhum elemento fosse encontrado no set, retronava falso. O(n). Depois, fui para o 242. Esse aqui consegui fazer, mas ter usado tres lacoes for me deixou meio suspeito se fiz da melhor maneira. Joguei tudo em 2 dicionarios e depois comparei os dois. O(3n). Por fim, o TwoSum eu nao consegui fazer de outra maneira sem ser O(n^2), algo que eu nao queria. No momento que li o exercicio, sabia que dava para fazer nessa complexidade, mas tambem sabia que o desafio do exercicio era fazer numa complexidade menor. Tentei usar um dicionario e depois percorre-lo, mas de qualquer jeito ia ficar O(n^2), entao nao consegui pensar na melhor maneira.
+Depois fui para a parte pesada do dia, o projeto da nba. Arrumei as dividas que tinha sem problemas. Depois, fiquei mais tempo do que deveria analisando a API, principalmente o endpoint de jogadores, que como cheguei a conclusao, nao sabe diferenciar atuais e aposentados. Um problema para as analises que pretendia fazer. Tudo o que fiz nessa parte, de maneira bem detalhada, esta no modelagem.md.
+Depois, fiz a revisao do esquema, e tirando a parte de entender sobre os diferentes arquivos .sql que eu tinha que criar, que pedi para o Claude me explicar melhor, de resto deu tudo certo.
+Em seguida, fiz o transform.py. Criei uma funcao que converte peso, outra que converte altura. Ambas acabaram ficando meio complexas, pois o mypy estava capturando varios problemas de tipagem nelas. Mas tirando isso, foi  uma conversao normal de inches para cm e lbs para kg. Lembrei nessa parte que quando se passa de float para int, o numero sempre eh arredondado para baixo. O problema maior foi nas funcoes de contrucao de tupla. Isso porque, tinha esquecido que o dicionario de retorno da API tinha as chaves 'data' e 'meta' mas que seus valores sao listas de dicionarios. Logo, nao coloquei esse tratamento dentro das funcoes, ate mesmo nas de altura e peso, o que acredito que tenha deixado o codigo super confuso. Nao deu tempo de arrumar. Esse que foi o grande problema. Mas ele esta passando. O problema eh que tem horas que pego o primeiro indice da lista de dicionarios, e nao sei se isso eh uma pratica muito boa.
+
+Onde travei:
+Travei no 26, antes de ver o video.
+Travei no 1 TwoSum.
+Me embananei ali na parte do transform e do dicionario de retorno do get. Acho que vou precisar arrumar isso.
+
+O que eu ainda nao entendo:
+Existe alguma alternativa melhor para o meu 242? Sinto que tem.
+Nao consegui pensar em commo fazer o 1 em O(n).
+
+Sensacao vs. resultado
+Acho que nao fui tao bem hoje. Tudo que fiz usei mais tempo do que realmente precisava. Nao sei se era o melhor jeito de ter feito as coisas. Nao consegui completar as 6 horas do dia. Sei que era muito, mas poderia ter ido bem melhor.
+
+**Pendências**
+proxima segunda, poderia voltar para uns exercicios de sql em python, e uns exercicios de requests e apis (qualquer coisa que vimos ate agora, so para ver se estou fresco e afiado)
+Alem disso, conteudos que ja coloquei no Bloco de o que nao entendia podem voltar segunda para ver se eu lembro das coisas.
