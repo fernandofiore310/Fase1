@@ -1,3 +1,11 @@
+### Volta semana que vem
+perguntas 2 e 3 de Segunda 12/10
+O G3 com desempate apenas no ROW_NUMBER
+A G5 com CTE
+O cabecalho da H4
+Two Sum em O(n), com a ideia vista no video e escrito sozinho
+26 e 49 LeetCode
+
 ### Por que não dá para usar função de janela no WHERE? A resposta é a mesma da pergunta do apelido.
 Nao se usa funcao de janela em um WHERE, pois funcoes de janela sao usadas no SELECT, que é executado depois do WHERE na hierarquia do sql. Logo, o where nao tera essa referencia e portanto nao pode acontecer.
 
