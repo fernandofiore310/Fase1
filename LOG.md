@@ -383,3 +383,24 @@ Acho que nao fui tao bem hoje. Tudo que fiz usei mais tempo do que realmente pre
 **Pendências**
 proxima segunda, poderia voltar para uns exercicios de sql em python, e uns exercicios de requests e apis (qualquer coisa que vimos ate agora, so para ver se estou fresco e afiado)
 Alem disso, conteudos que ja coloquei no Bloco de o que nao entendia podem voltar segunda para ver se eu lembro das coisas.
+
+### 2026-10-14 — Quarta (3h)
+
+O que fiz:
+Primeira coisa que fiz hoje foi escrever as coisas que eu deveria voltar na segunda e o DUVIDAS.md.
+Feito isso, parti para os ajustes no transform.py. Aqui, nao tive problemas. Arrumei tudo o que foi pedido e realizei os testes que foram pedidos tambem. Todos passaram. Entendi tambem o porque tinha que arrumar todos esses problemas.
+Depois parti para o desenvolvimento do db.py. Entendi que esse eh o arquivo que vai manipular a base de dados. Ate o momento, a unica coisa que ele faz eh inserir os times da nba na base. Mas, imagino eu que, conforme vamos aumentando as funcionalidades do nosso programa, esse arquivo vai ficar mais completo de funcoes. Depois, fui para o arquivo de explorar os times, e basicamente, manipulei o resultado do get, para conseguir pegar os dicionarios de cada time, jogar na funcao que monta as tuplas e colocar tudo numa lista novamente. Nessa parte, foi bom, pois consegui identificar sozinho o erro do meu INSERT, que estava sem o UPDATE. Foi bem legal o desenvolvimento.
+Por fim, fui para a parte de manipulacao dos jogos. Aqui, criei o game_params sem problemas, apenas copiei as outras funcoes e adaptei para os jogos. Em seguida, fui para o arquivo que explorava os games. Aqui, vi que todos os query_parameters que precisam vir em uma lista, nao podem vir com apenas uma unidade. Logo, o minimo que eh possivel pegar sao duas temporadas, nas quais peguei a 2024 e 2025. Nessa parte, quebrei a cabeca para entender como funcionava o next_crusor, mas no fim, entendi e consegui montar o laco que percorre todos as paginas ate o next cursor virar None. Por fim, fiz as anotacoes antes e depois do codigo, e deixei tudo no arquivo explore/explore_games.py. Calculei o tempo e contei a quantidade de jogos que foram capturados pelo programa. Por fim, rodei o ruff e o mypy. O ruff sobrou um erro que nao sei como arrumar e o mypy passou, depois que o arrumei.
+
+Onde travei:
+Travei no erro especifico do ruff, mas acho que eh algo muito especifico para que eu me preocupe muito.
+
+O que eu ainda nao entendo:
+vi que o PRAGMA foreign keys se usa a conexao para executar, enquanto existem outros comandos que o cursor eh usado para executar. Por que se faz isso? Qual o sentido de uma conexao executar algo? Quando executo com a conexao e quando executo com o cursor?
+Ainda nao entendo muito bem como deve/vai ficar a estrutura de pastas e nomes de arquivos. Vai ter src/, data/ e tests/? E quais sao os arquivos que serao usados?
+Acho que os nomes dos arquivos do explore estao comecando a ficar muito confusos e dispersos. Essa pasta sera usada mais para frente?
+
+Sensacao vs. resultado
+Acho que fui bem hoje. Consegui concentrar bastante e fazer os exercicios com atencao e nao tive problemas que me travaram ou me fizeram perder a atencao.
+
+**Pendências**
