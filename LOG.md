@@ -404,3 +404,22 @@ Sensacao vs. resultado
 Acho que fui bem hoje. Consegui concentrar bastante e fazer os exercicios com atencao e nao tive problemas que me travaram ou me fizeram perder a atencao.
 
 **Pendências**
+
+### 2026-10-17 — Sabado (2h)
+
+O que fiz:
+Comecei realizando os testes de idempotencia dos times. Essa parte foi mais tranquila. Rodei a carga dos times mais de uma vez, fiz a alteracao da cidade, troquei o [0:30] pela exploracao por id, e acrescentei as contagens no check.sql. A unica parte que nao consegui fazer, tambem por uma questao de tempo, foi o teste da season e da url dele. O que consegui foi rodar uma vez, com a lista [2025]. Nesse caso, o programa usou a url que eu esperava, mas lanca codigo 400. Preciso entender isso melhor, nao tive muito tempo para trabalhar nisso. Por isso, trabalhei com o [2024, 2025].
+Em seguida, fui para a parte de gravar os jogos. Essa parte achei tranquila tbm. Criei a funcao de gravar os jogos na base, e decidi realizar o commit quando tivesse todos os jogos da API juntos em uma lista. Fiz isso, pois, mesmo sabendo que o meu upsert esta funcional, eu prefiria adiconar todos de uma vez, e caso algum falhe, nenhum jogo eh gravado, considerando que o try/except da funcao vai fazer com que isso aconteca. Alem disso, criei uma funcao que fecha a conexao, algo que eu nao tinha feito ainda. Rodei outra vez e a contagem nao mudou. E, por fim, mantive o append, pois como estava chamando o game_params para um jogo por vez, fazia sentido eu colocar um append embaixo e ir adicionando time por time. Tanto que o ruff nao reclamou quando rodei ele agora.
+Por fim, realizei a exploracao dos jogadores. Rodei para todos os jogadores. Qualquer um que tivesse uma das colunas que discutimos como None ou "" eu printava algum de seus dados. Nao consegui alterar o schema.sql pois 1313 jogadores vieram com campos nulos, e, minha ideia era pegar o resultado do terminal, mandar para alguma IA, para ela listar todos esses jogadores e seus dados em um arquivo .md. Desse modo, eu saberia quais sao os jogadores e quais eu deveria me preocupar. Mas no caso nao consegui, pois a resposta do terminal ficou muito grande. Mas, como sao todos os jogadores da historia nessa API, sabemos que realmente existem esses casos.
+
+Onde travei:
+Nao consegui arrumar o negocio das seasons
+E nao sei o que fazer a respeito desses mais de 1000 jogadores de campos nulos (jogadores randoms).
+
+O que eu ainda nao entendo:
+
+
+Sensacao vs. resultado
+Acho que bem na media hoje. Fiz o possivel, mas deixei a desejar em analises melhores e deixei de fazer algumas coisas que foram pedidas.
+
+**Pendências**
