@@ -423,3 +423,21 @@ Sensacao vs. resultado
 Acho que bem na media hoje. Fiz o possivel, mas deixei a desejar em analises melhores e deixei de fazer algumas coisas que foram pedidas.
 
 **Pendências**
+
+### 2026-10-18 — Domingo (1h)
+
+O que fiz:
+Esse foi mais um domingo em que nao consegui completar a carga horaria novamente. Agora, eu e o Claude redesenhamos o cronograma para acabar com isso de uma vez por todas.
+Enfim, o que fiz nesse curto domingo foi arrumar as pendencias. Arrumei as seasons, colocando o seasons[], e sim, deu certo. Aproveitei e fiz isso com o team_ids no explore_players, para ja deixar o costume e o padrao. Em seguida, criei o dicionario de contadores diferentes, arrumei os campos na tabela de players pos analise e recriei a base.
+Em seguida, carreguei os players. Nao tive muitas duvidas nessa parte. Essa etapa so demorou, pois acabei cometendo alguns erros de atencao. Entao ele calculava o players_params para todos os jogadores, e depois quebrava em algo. O problema que quebrou foi que alguns jogadores possuiam peso e altura com o valor " ", algo que eu nao esperava. Ai tive que rodar bastante vezes. Foi chato.
+
+Onde travei:
+Diria que desta vez nao travei.
+
+O que eu ainda nao entendo:
+Nao entendi como que voce descobriu que aquele era o jeito certo de escrever sobre as seasons e por que deu certo esse jeito.
+
+Sensacao vs. resultado
+Diria que fui bem, se nao tivesse feito nem metade do que precisava ser feito. 
+
+**Pendências**
