@@ -441,3 +441,23 @@ Sensacao vs. resultado
 Diria que fui bem, se nao tivesse feito nem metade do que precisava ser feito. 
 
 **Pendências**
+
+### 2026-10-19 — Segunda (1h)
+
+O que fiz:
+Comecei pelas perguntas teoricas, e acredito que desta vez elas estao corretas.
+Em seguida fui para o TwoSum em O(n), no entanto, vi o video. Nao vi a resolucao dele, mas vi o raciocionio. Implementei ele, e passou nos testes. Nao tirei da lista de revisao, por conta do que aconteceu hoje com o 26.
+Em seguida parti para o 26 e nao consegui resolve-lo. Nao lembrava da maneira correta que eu tinha feito e fiquei meio travado. Lembrava que um dos ponteiros guardava o indice que eu queria substituir e o outro ia para o numero que eu queria verificar. No entanto, nao consegui implementar no tempo proposto.
+Por fim, fiz o G3 sem problemas. Realmente, o problema estava na ordenacao por nome dentro das funcoes RANK e DENSE_RANK. 
+Por fim, apenas criei um arquivo novo chamado REVISAO.md que possui a lista de coisas que devo voltar nas segundas.
+
+Onde travei:
+26 do LeetCode
+
+O que eu ainda nao entendo:
+
+
+Sensacao vs. resultado
+Diria que fui mediano, considerando que nao consegui fazer o 26, mas desenrolei o resto. 
+
+**Pendências**
