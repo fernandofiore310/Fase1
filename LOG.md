@@ -482,3 +482,25 @@ Sensacao vs. resultado
 Fui bem mal. Nao conseguui nenhum exercicio. 
 
 **Pendências**
+
+### 2026-10-21 — Quarta (3h)
+
+O que fiz:
+Comecei realizando a leitura dirigida do pytest e repsondendo as perguntas que o Claude preparou. Aqui, acredito que consegui acertar as perguntas. Na primeira, peguei a resposta do texto que achei na documentacao, por isso que mencionei o testpaths, mesmo nem sabendo o que seria isso. O parametrize dei a resposta que eu lembrava, de quando usei isso na Fase0.
+Em seguida, fiz o arquivo de testes do transform, sem problemas. Peguei o parametrize que usei na fase 0 e adaptei para esse projeto. Alem disso, quebrei o calculo da altura e quatro testes quebraram, os tres de altura com valors reais (e.g "6-8") e o test do player sem valores nulos. Nao lembrava muito bem do uso de fixtures, mas dei uma lida e entendi, e quis aplicar nso arquivos de teste.
+Realizei a leitura do Protocol e respondi as perguntas.
+Por fim, realizei o arquivo de testes dos times e do banco de dados sem grandes problemas. A questao de idempotencia funcionou como desejado.
+
+Onde travei:
+Hoje nao diria que travei em algo.
+
+O que eu ainda nao entendo:
+Sao mais duvidas do que coisas que nao entendo
+O :memory: aloca um espaco da RAM para usar como banco de dados e ter acesso mais rapido e nao mexer no banco de dados salvo no disco? Eh para isso que usamos ele?
+O nome que eu colocar na funcao do fixture vai sempre se referir, no arquivo todo, a aquilo que faco na funcao? Tipo esse nome vira meio que proprio do fixture no arquivo todo? A funcao do fixture precisa obrigatoriamente retornar algo?
+Ainda nao entendi muito bem a utilidade do Protocol nesse projeto.
+
+Sensacao vs. resultado
+Acredito que hoje fui bem. Consegui escrever bem os testes, mesmo fazendo tempo que nao mexia com eles.
+
+**Pendências**
