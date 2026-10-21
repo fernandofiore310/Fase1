@@ -461,3 +461,24 @@ Sensacao vs. resultado
 Diria que fui mediano, considerando que nao consegui fazer o 26, mas desenrolei o resto. 
 
 **Pendências**
+
+### 2026-10-20 — Terça (3h)
+
+O que fiz:
+Comecei o dia pela parte de acabamento. Foi tranquila essa parte. A unica coisa que tive que perguntar para o gemini, era como usava o comando grep que foi recomendado. De resto fiz tranquilo. Acredito que minhas respostas de textos ficaram melhores.
+O problema foi na segunda parte do dia, nos exercicios de algoritmos.
+Comecando pelo 26, novamente, nao consegui resolve-lo dentro dos 15 minutos. Decidi levar ate os 25 minutos, mas em vao, visto que ainda assim eu nao consegui faze-lo. Ele estava arrumando certinho o primeiro numero diferente que encontrava, porem, o resto ele se embananava. Nao sei, preciso ver isso.
+O 49 eu achei talvez o mais dificil do dia. Nao consegui pensar em solucao alguma. Entao, depois de 10 minutos apenas, decidi abrir um video solucao no youtube (devia ter aberto o do NeetCode). Vi o primeiro, nao entendi muito bem a solucao, e vi um segundo, onde ele criava um dicionario onde as chaves eram tuplas com uma lista dentro e o valor eram as palavras (confesso que nao lembro muito bem). Era outro approach bem complexo, que nunca teria pensado em resolver dessa maneira. Entao, nao implementei e segui para o próximo.
+O 347 eu consegui resolver, mas obviamente em uma complexidade ruim. Entao, fiquei quebrando a cabeca, mas nao consegui pensar em uma solucao melhor. Entao, vi o video. Uma solucao um tanto quanto diferente, mas entendi a ideia dele. Entao comecei a implementar. Quando tinha feito a lista da implementacao da maneira correta, percebi que tinha sobrescrito o codigo original, entao fui tentar arrumar tudo e perdi o codigo certo que tinha acabado de escrever. Entao, perdi a cabeca, e fechei o computador de raiva. Nem ia dar tempo para o 128 pelo menos. 
+
+Onde travei:
+26, 49 e 347 LeetCode
+
+O que eu ainda nao entendo:
+Diferenca de usar o git rm e o rm normal para renomear arquivos.
+
+
+Sensacao vs. resultado
+Fui bem mal. Nao conseguui nenhum exercicio. 
+
+**Pendências**
