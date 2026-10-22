@@ -504,3 +504,28 @@ Sensacao vs. resultado
 Acredito que hoje fui bem. Consegui escrever bem os testes, mesmo fazendo tempo que nao mexia com eles.
 
 **Pendências**
+
+### 2026-10-22 — Quinta (4h)
+
+O que fiz:
+Comecei pelas pendencias de ontem. Respondi as tres primeiras, no entanto, dentro dos 15 minutos, nao consegui responder a ultima pergunta sobre o Protocol. Ainda nao tinha entendido muito bem a sua funcao na hora, e por isso, gastei um tempo tirando duvidas e lendo sobre o assunto. No entanto, acredito que com as coisas que fiz hoje, consegui entender mais sobre o assunto. Nao vou falar que entendi 100% o que serve o protocol, mas no meu projeto especificamente, a sua funcao ficou clara para mim. No projeto, ele serve para que eu possa criar uma classe de cliente que nao precisa fazer requisicoes com a API e possa realizar testes, de modo que a tipagem nao quebre, visto que estamos usando duas classes diferentes.
+Em seguida, criei as classes do ClientProtocol e Client (cliente que realmente interage com a API). Gostei da ideia de usar classe para o cliente, de modo que, para mim, ficou mais facil de vizualizar o codigo que realmente interagem com a API. Em outras palavras, quem realmente, no projeto, eh o cliente da aplicacao.
+Depois, parti para o desenvolvimento do load.py, mais especificamente para o load dos times. Aqui acho que nao tives muitos problemas. O explore apenas abre a conexao, cria o cliente e fecha a conexao. O resto, juntar os parametros, chamar a funcao para interagir com a API, manipular os dados e guardar no db fica tudo com o load. Ele vai da chamada da API ate o carregamento no db. Fez sentiso na minha cabeca.
+Fiz load, seguido de testes, para times, jogos e jogadores, nessa ordem.
+Os loads, nao tive nenhum problema.
+Os testes, a grande dor de cabeca que tive foi montar os dicionarios com o valor do cursor como chave. No caso para jogos e times.
+De resto foi tranquilo. Coloquei queries de sql e fiz comparacoes (asserts) com o fetchall e fetchone.
+Onde mais tive problema, foi no final, com o mypy, devido aos dicionarios com chaves int (cursor) que tive que criar. O que fiz foi mudar a assinatura dos get_data das diferentes classes de clientes para que o cursor fosse obrigatoriamente um int.
+
+Onde travei:
+Diria apenas que travei no erro do mypy, mas consegui arrumar com a ajuda do Claude.
+
+O que eu ainda nao entendo:
+Nao entendi ainda muito bem quando que a funcao que abre conexao com a memoria volta. Tipo, tem o yield que devolve a conexao, mnas ainda nao entendi quando que o codigo volta para a funcao e fecha a conexao.
+O protocol, como disse antes, ficou claro o seu uso especificamente nesse projeto. Mas ele eh usado apenas para poder fazer testes sem interagir com a API? COm certeza tem mais funcionalidades.
+Quero entender uma especie de esquema que conecta todos os agentes do nosso projeto. client.py, db.py, transform.py, API. Acho que isso realmente importa.
+
+Sensacao vs. resultado
+Acredito que ok hoje. Consegui fazer tudo, mas nao respondi a pergunta do protocol, e perdi a cabeca com o erro do mypy.
+
+**Pendências**
