@@ -529,3 +529,25 @@ Sensacao vs. resultado
 Acredito que ok hoje. Consegui fazer tudo, mas nao respondi a pergunta do protocol, e perdi a cabeca com o erro do mypy.
 
 **Pendências**
+
+### 2026-10-23 — Sexta (2h)
+
+O que fiz:
+Comecei fazendo os fechamentos da semana, acabando com os leves "erros" que tinham nos arquivos de teste e no load.py. Aqui foi sem problemas, alem do fato de eu ter entendido o porque eu precisava arrumar.
+Em seguida, arrumei a lista de voltas e o readme do repositorio de algoritmos. Agora, vou seguir firmemente a tabela de regras.
+Por fim, fiz as perguntas. Adicionei mais uma falando sobre back-to-backs e estou pensando em fazer uma que compara vitorias com pythagorean wins (uma ideia do claude). So preciso entender essa segunda metrica. Alem disso, descartei algumas perguntas devido a limitacao da nossa base de jogadores.
+Para finalizar, comecei manipulando os dados e vendo quais perguntas poderiam ser respondidas usando funcoes de janela. Comecei pela dos colleges que mais tiveram top 5 picks na historia e picks de primeiro round. Aqui foi tranquilo. Usei um rank baseado em um COUNT dos jogadores, agrupados por college.
+O problema foi na outra, onde queria ver os times com mais pontos e vitorias em uma temporada. O problema eh que travei aqui, pois nao sabia como juntar tudo em uma tabela. Nao sabia se precisava usar um CTE ou subconsulta ou outra ferramenta. Entao, fiz uma query apenas para pegar vitorias em casa e fora de cada time, e pontos em casa e fora de cada time. Porem, nao faco ideia de como consigo juntar isso para criar uma tabela com uma coluna com pontos marcados total e uma de vitorias totais.
+Por conta dessa travada, nem consegui partir para outra pergunta.
+
+Onde travei:
+Travei na pergunta de pontos e vitorias totais por time na temporada.
+
+O que eu ainda nao entendo:
+Nao entendi porque foi criado um arquivo g.visitor_team_score no meu repo. Sem querer subi ele.
+
+Sensacao vs. resultado
+Acredito que foi ok hoje. Tirando que travei em um exercicio, era um exercicio dificil que vou ter que pensar e discutir para ver qual raciocinio usar.
+
+**Pendências**
+
