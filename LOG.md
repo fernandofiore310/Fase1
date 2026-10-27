@@ -551,3 +551,22 @@ Acredito que foi ok hoje. Tirando que travei em um exercicio, era um exercicio d
 
 **Pendências**
 
+### 2026-10-23 — Sexta (2h)
+
+O que fiz:
+No 125, nao tive muitos problemas. Demorei, pois tinha escrito algumas coisas errado, por falta de atencao. Mas de resto acredito que foi tranquilo.
+Parti para o 167. No comeco, confundi com o 1, que possuia lista nao ordenada. Mas depois, me liguei e comecei a fazer o exercicio. No entanto, meu exercicio nao passou, devido aos numeros negativos. Poderia ter feito um if para esses casos, no entanto, acredito que essa nao seja a maneira correta.
+No 217, assim que li o cabecalho de perguntas de arrays e hashing, ja me liguei que o exercicio seria rapido e eficiente com o uso de um set, e implementei sem problemas.
+Por fim, o 242, onde perguntei para o Gemini como que era feita a comparacao de dicionarios com == e resolvi o exercicio usando essa comparacao, porem ainda criando dois dicts. Como mencionei na anotacao, eu nao sei se da para fazer com 1 dicionario e se seria mais eficiente, mas vale eu pensar um pouco no assunto.
+Entao, para finalizar, fiz o G5. Escrevi a CTE sem problemas. O meu problema foi na funcao de janela, pois estava usando o Partition by com a receita do mes, e estava devolvendo a mesma coisa, sem ser acumulada. Entao, troquei por order by e foi, mas nao faco ideia do por que funcionou com order by. So troquei para ver se algo funcionava.
+
+Onde travei:
+No erro dos negativos do 167, porem, nao tive muito tempo para pensar em uma solucao.
+
+O que eu ainda nao entendo:
+De novo, me confundi, sem saber diferenciar o partition e o order by no exercicio que tem acumulo.
+
+Sensacao vs. resultado
+Acredito que foi ok hoje
+
+**Pendências**

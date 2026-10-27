@@ -1,7 +1,4 @@
 ### Volta semana que vem
-A G5 com CTE - Segunda 26/10
-217 e 242 LeetCode - Segunda 26/10
-125 e 167 LeetCode - Segunda 26/10
 
 26 (com rastro no papel) - Terca 27/10
 49 LeetCode (com video) - Terca 27/10
