@@ -551,7 +551,7 @@ Acredito que foi ok hoje. Tirando que travei em um exercicio, era um exercicio d
 
 **Pendências**
 
-### 2026-10-23 — Sexta (2h)
+### 2026-10-26 — Segunda (1h)
 
 O que fiz:
 No 125, nao tive muitos problemas. Demorei, pois tinha escrito algumas coisas errado, por falta de atencao. Mas de resto acredito que foi tranquilo.
@@ -568,5 +568,26 @@ De novo, me confundi, sem saber diferenciar o partition e o order by no exercici
 
 Sensacao vs. resultado
 Acredito que foi ok hoje
+
+**Pendências**
+
+### 2026-10-27 — Terca (2h)
+
+O que fiz:
+Comecei pelo 167. Esse aqui realmente eu cometi um erro muito burro na segunda, de quem estava cansado e arrumei ele. Esses sao erros bobos que tenho que tentar evitar de qualquer maneira.
+Em seguida fui para o 26. Peguei o caderno e comecei a desenhar passo a passo o que tinha que fazer. Foi no caderno que me liguei: quando os numeros que o l e o r apontassem fossem diferentes, apenas o l tinha que andar, o r nao. Isso era algo que eu estava fazendo em praticamente todas as implementacoes pre v4. Logo, consegui fazer esse exercicio.
+Depois, fui para o 49. Esse aqui eh dificil. Vi o video do Neetcode e com isso, desenvolvi minha ideia de criar um dic cujas chaves eram dic e os valores eram listas (na solucao ele fazia um dic cujas chaves eram listas e os valores tbm). Mas um dic nao pode ter chave mutavel, e por isso na solucao ele transformava a lista em tupla. Tentei fazer isso com meu dic, mas nesse caso, ele perdia o sentido, visto que ao transformar em tupla os valores sumiam. Entao entendi, o melhor jeito de se fazer eh fazer do jeito do video (que por sinal eh bem complicado, ele usou uma funcao ord()para pegar valor ASCII que nunca vi na minha vida), que eh criar as listas com 26 espacoes e colocar cada letra no seu respectivo espaco, usando a diferenca de valores ASCII para identificar onde vai cada letra. E em seguida transforma-las em tuplas.
+O 347, tambem tive que ver o video,e implementei o seu raciocinio. Ate a criacao da lista de listas + 0s, eu fiz direitinho. O problema meu, ficou na parte de percorrer a lista de tras para frente e retirar os k valores. Estava dando um erro no pop e meu tempo esgotou, entao nao consegui arrumar.
+Por fim, fiz o 1. Achei que estava fazendo certo, porem deu errado. Pensando aqui, acredito que meu erro foi que, pos fazer a diferenca, esqueci de tirar o caso de diff estar em d e ser igual ao mesmo numero n que usei para calcular a diferenca. 
+Nao fiz a parte de acabmento.
+
+Onde travei:
+49, 347, 1
+
+O que eu ainda nao entendo:
+
+
+Sensacao vs. resultado
+Acredito que foi mal hoje, considerando que dei umas travadas e nao fiz o acabamento.
 
 **Pendências**
