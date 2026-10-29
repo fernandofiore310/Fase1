@@ -591,3 +591,26 @@ Sensacao vs. resultado
 Acredito que foi mal hoje, considerando que dei umas travadas e nao fiz o acabamento.
 
 **Pendências**
+
+### 2026-10-28 — Quarta (3h)
+
+O que fiz:
+Comecei pela consulta das vitorias e pontos marcados por time em cada temporada (2024 e 2025). Primeira coisa que fiz foi pedir ajuda para o chat com o UNION ALL e o CASE WHEN, pois nao sabia usa-los. Tendo aprendido, montei a primeira CTE, onde pegava, para cada jogo da base de dados, o time da casa e o time visitante, com os placares, data e se o time ganhou ou venceu (case when).
+O problema foi que quando fui contar os jogos de cada time por temporada, percebi que os jogos de play-in e a final do IST eram considerados. Pior ainda, depois descobri que para a temporada 2024, os jogos do IST tinham a coluna ist_stage marcados como NULL. Toda essa descoberta acabou me levando um tempo grande, que me impossibilitou de fazer as outras queries. A solucao que fiz foi desenvolver uma outra tabela (specific_dates) com a data do ultimo jogo da temporada regular e o id da final do IST, para as temporada 2024 e 2025. Usei isso na primeira CTE para tirare esses jogos da conta.
+Depois, criei a segunda CTE que conta o total de vitorias e o total de pontos. Dei uma travadinha nessa parte de pontos, mas o Claude me deu uma dica e eu implementei: troquei o home_team_score e o visitor_team_score da primeira CTE por pontos marcados e pontos sofridos por cada time. Dessa forma, na segunda CTE, so precisei fazer um SUM dos pontos marcados.
+Por fim, fiz a ultima query usando um RANK, para rankear por vitoria por temporada. Essa foi a parte que tive menos problema, a unica coisa foi que antes estava agrupando por vitorias e depois temporada e visualmente era pior, entao ordenei na ordem contraria. 
+Unica coisa: acredito que vou ter que mexer um pouco nesse arquivo, de modo a fazer algo mais visual. Fazer tres tabelas rankeadas em cada temporada: vitorias, pontos marcados, pontos sofridos. Depois, a partir disso, talvez calcular alguma metrica e ver se condiz com vitoria. Talvez puxar mais temporadas nessa analise especifica (agora que a query esta pronta, seria mais facil, so teria que adicionar a linha de 2023 do ist e os play-ins na tabela nova).
+Depois, pedi para o chat me dar uma aula sobre argparse. Foi uma aula muito boa e realmente achei muit interessante. Depois que reparei (ainda mais depois de uma das perguntas de argparse) que o git usa muito essa funcao. Claro, nao sei se ele esta programado em python e se usa essa biblioteca especifica, mas sei que ele usa algo parecido. Muit interessante.
+Acabei nao escrevendo nenhum dos arquivos no docs: tanto o modelagem.md quando o cli.md (parte do desenho). Tudo por questao de tempo.
+
+Onde travei:
+Na soma de vitorias (falta de atencao) e pontos totais. 
+Em como melhorar a vizualizacao da parte de high e low scoring team wins.
+
+O que eu ainda nao entendo:
+Eu ainda nao entendi muito como o usuario vai agir nesse projeto. Ele vai no terminal e vai colocar se quer load ou se quer query. Mas a query, eh como se eu desse um nome para cada uma, e quando o usuario roda, ele ve exatamente o que ele pediu?
+
+Sensacao vs. resultado
+Acredito que fui ok, considerando que tive que tratar esse problema que comeu bastante tempo.
+
+**Pendências**
