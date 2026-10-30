@@ -614,3 +614,30 @@ Sensacao vs. resultado
 Acredito que fui ok, considerando que tive que tratar esse problema que comeu bastante tempo.
 
 **Pendências**
+
+### 2026-10-29 — Quinta (2h)
+
+O que fiz:
+Comecei pelos ajiustes na main, onde acredito que consegui fazer sem problemas.
+Depois disso parti para o desenho do cli.py, onde acredito que descrevi corretamente o que deveria acontecer no programa e o que deveria ter nele.
+Parti para o seu desenvolvimento. Comecei criando o Parser, e adicionando o comando que permite a criacao de subparsers derivados do parser principal que havia criado. 
+Depois, criei o subparser load, com o argumento posicional table, com as opcoes apenas das tres tabelas principais do projeto. Depois crieri o argumento opcional seasons, no entanto, nao sei como fazer com que ele rode apenas quando o argumento posicional for games (nao sabia se eu colocava um if args.table == 'games' e dentro do bloco criava o argumento opcional).
+Fiz o mesmo para a funcao query.
+Depois parti para a implementacao das funcoes. Aqui fiquei meio confuso no comeco, mas acho que peguei a manha depois. O nome do subcomando usado na CLI fica armazenado, no meu codigo, em args.dest. Na linha load_parser.set_defaults(func=load_data), estou criando o args.func e adicionando nele a funcao que eu quero que fique associada aquele subparser especifico (no caso o load). Por fim, chamo a funcao com args.func(args).
+Para escrever as funcoes, comecei pelo load, que foi tranquilo. Apenas chamei a funcao load respecitva de cada tabela, baseado no valor de args.table.
+Para a query, gastei um pouco mais de tempo. Isso porque antes eu estava usando o executescript, que nao estava fazendo nada. Alem disso, estava usando apenas o cursor description, que tambem so me dava o nome de cada coluna.
+Tudo mudou quando troquei para o .execute e usei o fetchall() para pegar o resultado. O problema eh que nao formatei a saida, entao ainda esta saindo meio feio. Para as outras queries eu nao fiz nada ainda, visto que nao estao prontas.
+Infelizmente tive um imprevisto e nao consegui fazer a parte do git. So fiz a do CLI.
+
+Onde travei:
+Travei um pouco na parte de fazer a funcao da query e travei um pouco na hora de criar as funcoes de cada subparser e fazer todo o processo para torna-las funcionais.
+
+O que eu ainda nao entendo:
+Qual a diferenca do execute, executeall e executescript? Achei que o execute so rodava uma linha do arquivo, por isso estava evitando usar.
+O description so serve para mostrar o nome das colunas?
+
+Sensacao vs. resultado
+Acredito que fui mediano, poderia ter ido melhor.
+
+**Pendências**
+Gostaria de fazer uns exercicios ficticios para fixar o argparse
