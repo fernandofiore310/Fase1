@@ -641,3 +641,26 @@ Acredito que fui mediano, poderia ter ido melhor.
 
 **Pendências**
 Gostaria de fazer uns exercicios ficticios para fixar o argparse
+
+### 2026-10-30 — Sexta (3h)
+
+O que fiz:
+Comecei preenchendo o queries.py para a query de vitorias, derrotas e pontos marcados por time. Fiz isso porque era a unica query que tinha pronta ate aquele momento. Aqui acredito que consegui fazer tudo certo, no entanto, o jeito que sao exibidos os dados, alem de feios (com a width fixa e tudo mais), estao vindo de um jeito que nao acho interessante. Acho que deveria ter um rank de vitorias, um de ponto marcados e um de pontos sofridos. Sao tres queries diferentes mas que eu acho que vale a pena serem exibidas juntas, ate porque, o usuario quer ver se o time que mais marcou pontos em uma temporada consegui um bom numero de vitorias por exemplo.
+Em seguida, pedi para o chatgpt me dar uma aula dos capitulos 3 e 4 do Pro Git, e senti que a aula realmente ficou muito boa. Pedi para ele, basicamente, explicar tudo com um exemplo so, e achei bem didatico. Obviamente acredito que conforme vou praticando cada vez mais, vou aprendendo mais. Alem disso, respondi as perguntas, mas nao deu tempo de responder a ultima (que sinceramente nao ia conseguir responder).
+Em seguida parti para o exercicio de git colaborativo. Comecei realizando as alteracoes nos readme.md em ambas as branches. Em seguida, rodei o git fecth. A principio achei que nada tinha acontecido, no entanto, vi que o ponteiro do repositorio remoto da branch main foi atualizado no meu repositorio local, mostrando entao, que uma alteracao no readme da branch main havia acontecido. Depois, fiz o rebase, onde tanto minha main, como a outra branch, no meu repositorio local, ficaram atualizadas. No entanto, o problema ainda estava nos ponteiros do repositorio remoto, para a branch que nao era a main. Isso porque, o rebase origin/main pegou as mudancas da outra branch e adicionou logo depois de onde o origin/main estava apontando. No entanto essa mudanca foi feita apenas na branch do repo local. Entao, tive que dar um push --force-with-lease para conseguir atualizar o origin/CLI_feature para ficar igual o meu local.
+Feito isso, abri um PR para poder atualizar a main, no caso, deixar a main exatamente como estava a branch CLI_feature e consequentemente atualizar o origin/main. Caso aceite o PR, posso dar um git pull na minha main local e atualiza-la tambem.
+Nao tive tempo para fazer o README.md
+
+Onde travei:
+Travei na ultima pergunta do git.md
+Travei nas vezes que usei o git fetch durante o exercicio.
+Travei para fazer o teste da query que eu queria.
+
+O que eu ainda nao entendo:
+Gostaria de saber se a explicacao que dei, na primeira secao desse dia de LOG, esta correta sobre tudo do git colaborativo.
+
+Sensacao vs. resultado
+Acredito que fui mediano, poderia ter ido melhor.
+
+**Pendências**
+Gostaria de pedir para o ChatGPT, que me deu a aula dos capitulos de Pro Git, fizesse uma provinha sobre o tema. Sinto que ele eh bem importante.

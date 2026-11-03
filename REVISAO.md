@@ -5,6 +5,6 @@
 347 LeetCode - Terca 27/10
 Two Sum em O(n), com a ideia vista no video e escrito sozinho - Terca 27/10
 
-O cabecalho da H4 - Segunda 02/11
-Exercicios de sqlite3 e requests - Segunda 02/11
-344 LeetCode - Segunda 02/11
+O cabecalho da H4 - Segunda 09/11
+Exercicios de sqlite3 e requests - Segunda 09/11
+344 LeetCode - Segunda 09/11
