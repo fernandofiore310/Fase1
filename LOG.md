@@ -664,3 +664,22 @@ Acredito que fui mediano, poderia ter ido melhor.
 
 **Pendências**
 Gostaria de pedir para o ChatGPT, que me deu a aula dos capitulos de Pro Git, fizesse uma provinha sobre o tema. Sinto que ele eh bem importante.
+
+### 2026-11-03 — Terca (3h)
+
+**O que fiz**
+Comecei resolvendo os problemas que haviam no meu codigo. Entendi o porque tinha que mudar as funcoes de executar a query e carregar a query. O metodo dos dicionarios facilitou muito isso, visto que agora nao preciso mais de um bloco if para cada caminho que eu quiser fazer. Alem disso, transformei o arquivo de colleges em um so, no caso, pick de loteria de cada equipe.
+Depois, parti para a funcao que printava da maneira bonita para cada quey especifica. Consegui pegar os valores de largura, no entanto, nao consegui printar o cabecalho e as linhas, acabou o tempo e estava dando erro. Acredito que quando eu conseguir o cabecalho, as linhas serao tranquilas de printar tambem.
+Por fim, fiz parte do README. Isso eh o que consegui fazer com o tempo que tinha. Escrevi em portugues e pedi para o ChatGPT traduzir para ingles (mais facil).
+Apenas nao deu tempo de testar o readme.md para ver se ele esta certo.
+
+**Onde travei**
+Travei no comeco, para entender a estrutura proposta de uma funcao ler o script e outra executar, sem if algum. Mas depois saquei e consegui implementar.
+Travei na funcao do print. Realmente nao sabia como fazer isso de um bom jeito.
+
+**O que ainda não entendo**
+
+**Sensação vs. resultado**
+Fui ok hoje. Consegui os exercicios, mas fiquei com certas duvidas
+
+**Pendências**
