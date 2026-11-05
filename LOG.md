@@ -706,11 +706,12 @@ Implementacao do back-toback
 Restante do README.md
 Exercicios de criterio da Fase
 
-### 2026-11-04 — Quarta (3h)
+### 2026-11-05 — Quinta (4h)
 
 **O que fiz**
-Comecei 
-Depois parti
+Comecei criando a query de janela. Para comecar, fiz uma CTE, usando o UNION ALL para pegar os jogos de cada time, e usando o CASE WHEN, ver quando ele ganhou ou quando perdeu, baseado na pontuacao de cada time naquele jogo. Feito isso, fiz uma query e usei uma funcao de janela para somar as vitorias de cada time (partition com id do time, ordenando pela data) e contei quantos jogos cada time teve (count, com a mesma estrutura das vitorias). O problema foi que nao consegui o de dias entre os jogos
+
+Depois parti para a resolucao do conflito de merge. Segue o que fiz:
 
 Grafo inicial:
 (.venv) ffiore310@XPS14310:~/conflito$ git log --graph --all
@@ -805,15 +806,18 @@ Grafo Final:
 
       base
 
+Em seguida, escrevi a complexidade das funcoes, acredxito eu, de maneira correta e sem problemas.
+Fechei o PR escrevendo as mensagens e terminei escrevendo o fechamento.
+
 **Onde travei**
-Nao travei hoje.
+Travei na funcao de dias contados.
 
 **O que ainda não entendo**
+Nao entendi muito bem o seguinte caso: estou no terminal, na branch main, e dou um git merge. Isso quer dizer que quero juntar as mudancas da branch no main certo? Se fosse o contrario: eu estivesse na branch e desse um merge, eu pegaria as mudancas da main e juntaria na branch?
 
 **Sensação vs. resultado**
-Fui ok hoje. Considerando o fato que nao fiz os exercicios de criterio.
+Fui bem hoje. Tirando o exercicios de sql que fiz no tempo total, os outros fiz em menos tempo do que o esperado.
 
 **Pendências**
 Implementacao do back-toback
 Restante do README.md
-Exercicios de criterio da Fase
