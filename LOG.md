@@ -705,3 +705,115 @@ Fui ok hoje. Considerando o fato que nao fiz os exercicios de criterio.
 Implementacao do back-toback
 Restante do README.md
 Exercicios de criterio da Fase
+
+### 2026-11-04 — Quarta (3h)
+
+**O que fiz**
+Comecei 
+Depois parti
+
+Grafo inicial:
+(.venv) ffiore310@XPS14310:~/conflito$ git log --graph --all
+* commit d9ac31c37724b38f09715aec1c2043c6854da6ab (HEAD -> main)
+| Author: Fernando Fiore <fernandofiore310@gmail.com>
+| Date:   Thu Nov 5 11:13:37 2026 -0800
+|
+|     main
+|
+| * commit 00bf29c5998b4d1663e748242d284898c238cb30 (outra)
+|/  Author: Fernando Fiore <fernandofiore310@gmail.com>
+|   Date:   Thu Nov 5 11:13:17 2026 -0800
+|
+|       outra
+|
+* commit bc8427adc19663e5c637f6b040afe17b779989ba
+  Author: Fernando Fiore <fernandofiore310@gmail.com>
+  Date:   Thu Nov 5 11:12:20 2026 -0800
+
+      base
+
+Comandos usados (em ordem cronologica):
+git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   notas.txt
+
+git diff
+diff --cc notas.txt
+index 63e58a9,195947c..0000000
+--- a/notas.txt
++++ b/notas.txt
+@@@ -1,1 -1,1 +1,5 @@@
+++<<<<<<< HEAD
+ +versao da main
+++=======
++ versao da outra
+++>>>>>>> outra
+(.venv) ffiore310@XPS14310:~/conflito$ nano notas.txt
+(.venv) ffiore310@XPS14310:~/conflito$ nano notas.txt
+(.venv) ffiore310@XPS14310:~/conflito$ nano notas.txt
+(.venv) ffiore310@XPS14310:~/conflito$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+nano notas.txt
+nano notas.txt
+nano notas.txt
+
+git add .
+git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   notas.txt
+
+git merge --continue
+
+Grafo Final:
+(.venv) ffiore310@XPS14310:~/conflito$ git log --graph --all
+*   commit fdc31335d82db19f8f1fa4f6fd1e3ff00031d53a (HEAD -> main)
+|\  Merge: d9ac31c 00bf29c
+| | Author: Fernando Fiore <fernandofiore310@gmail.com>
+| | Date:   Thu Nov 5 11:26:45 2026 -0800
+| |
+| |     Merge branch 'outra'
+| |
+| * commit 00bf29c5998b4d1663e748242d284898c238cb30 (outra)
+| | Author: Fernando Fiore <fernandofiore310@gmail.com>
+| | Date:   Thu Nov 5 11:13:17 2026 -0800
+| |
+| |     outra
+| |
+* | commit d9ac31c37724b38f09715aec1c2043c6854da6ab
+|/  Author: Fernando Fiore <fernandofiore310@gmail.com>
+|   Date:   Thu Nov 5 11:13:37 2026 -0800
+|
+|       main
+|
+* commit bc8427adc19663e5c637f6b040afe17b779989ba
+  Author: Fernando Fiore <fernandofiore310@gmail.com>
+  Date:   Thu Nov 5 11:12:20 2026 -0800
+
+      base
+
+**Onde travei**
+Nao travei hoje.
+
+**O que ainda não entendo**
+
+**Sensação vs. resultado**
+Fui ok hoje. Considerando o fato que nao fiz os exercicios de criterio.
+
+**Pendências**
+Implementacao do back-toback
+Restante do README.md
+Exercicios de criterio da Fase
