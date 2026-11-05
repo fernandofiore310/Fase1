@@ -683,3 +683,25 @@ Travei na funcao do print. Realmente nao sabia como fazer isso de um bom jeito.
 Fui ok hoje. Consegui os exercicios, mas fiquei com certas duvidas
 
 **Pendências**
+
+### 2026-11-04 — Quarta (3h)
+
+**O que fiz**
+Comecei arrmando o problema da impressao. Lendo a mensagem de erro, consegui entender qual era o problema: nao poderia ter espacos. Entao, quando arrumei isso, deu certo. Entao a partir dai, apenas printei as linhas tambem, e dei uma formatada para o resultado sair mais bonto. Fiz em um tempo menor do que o esperado. 
+O mesmo vale para o mypy, onde adicionei os ..., ja que a tupla de linhas tem tamanho indefinido dependendo da query que eh rodada.
+Depois, escrevi o git.md. Aqui, acredito que fiz certo. Escrevi o esquema, desde antes do fetch, ate um pull que o usuario faz para seu repositorio local, nma branch main.
+Por fim, rodei o README.md e foi sem problemas. Claro, conforme vou adicionando as coisas que faltam, vou atualizando o readme.
+Nao fiz os exercicios que garantem os criterios da Fase 1.
+
+**Onde travei**
+Nao travei hoje.
+
+**O que ainda não entendo**
+
+**Sensação vs. resultado**
+Fui ok hoje. Considerando o fato que nao fiz os exercicios de criterio.
+
+**Pendências**
+Implementacao do back-toback
+Restante do README.md
+Exercicios de criterio da Fase
