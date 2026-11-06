@@ -46,7 +46,14 @@ SUM(result) OVER (
 COUNT(result) OVER (
     PARTITION BY team_id
     ORDER BY date
-) games_played
+) games_played,
+julianday(date) - julianday(
+    LAG(date) OVER (
+        PARTITION BY team_id
+        ORDER BY date
+    )
+) days_between_games
 FROM teams_games
+WHERE full_name = 'Washington Wizards'
 ORDER BY date
 ;
