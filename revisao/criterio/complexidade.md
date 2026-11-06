@@ -2,13 +2,13 @@
 
 ### A complexidade em O, dizendo o que é cada letra.
 
-A funcao print_result é O(c*l + l), onde:
+A funcao print_result é O(c*l + l*c), onde:
     - c: número de colunas que a query resultante tem
     - l: número de linhas que a query resultante tem
 
 ### Quais laços geram cada fator
 O primeiro laço, que percorre a lista de colunas, gera esse fator c. E o laço dentro desse laço, que percorre as linhas, gera o fator c*l.
-O '+ l' é gerado pelo laço que printa linha por linha, e mais uma vez, percorre as tuplas de cada linha dentro da lista de tuplas.
+O 'l*c' é gerado pelo laço que printa linha por linha, e mais uma vez, percorre as tuplas de cada linha dentro da lista de tuplas (fator l); e pelo laco que, dentro de cada tupla, percorre cada valor correspondente a cada coluna (fator c).
 
 ## Função load_games()
 
